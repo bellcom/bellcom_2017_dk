@@ -7,10 +7,11 @@
 /docroot/profiles/contrib
 /docroot/themes/contrib
 /docroot/sites/default/files
+/db
 
 
 # Ignore Composer-managed dependencies.
 vendor/
 settings.php
 docroot/sites/bellcom_aug_2017.dd
-
+docroot/sites/new-bellcom-aug.dd
