@@ -139,10 +139,22 @@ button {
     align-items: center;
     margin: 0;
     left: 0;
-    bottom: 80px;
+    bottom: -50px;
     position: absolute;
 }
-
+.title-container-banner {
+        position: absolute!important;
+    top: 20%!important;
+    z-index: 99!important;
+    width: 100%!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-container-banner h1 {
+    color: #fff;
+    font-size: 42px;
+}
 .cards-wrapped {
     z-index: 999!important;
     width: 100%;
@@ -2577,7 +2589,7 @@ nav li {
         padding-right: 0px;
     }
     .cards-wrapped {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -2585,8 +2597,13 @@ nav li {
     #block-frontpagefullwidthimg img {
         height: 300px!important;
     }
+    .cta-block, .con-img-right, .customer-logos, .con-img-right {visibility: hidden;} 
+    .bg-white {
+        min-height: 1020px!important;
+    }
     .cards-wrapped {
-        width: 90%;
+        width: 100%!important;
+
     }
     .con-img-right #udvikling {
         display: none!important;
@@ -2649,8 +2666,8 @@ nav li {
         height: 200px;
     }
     .wrapping-cards {
-        position: relative;
-        top: 0;
+        position: absolute;
+        top: 300px;
     }
     .title-customer h3 {
         text-align: center!important;
@@ -2892,14 +2909,14 @@ nav li {
         padding: 40px!important;
     }
     .overlay {
-        height: 1600px;
+        height: 100%;
         background-image: linear-gradient(120deg, #8cc63e 0%, #d4fc79 100%);
     }
     .cards-wrapped {
         width: 100%;
     }
     .intro-header {
-        height: 1600px;
+        height: 600px;
         background-size: 250vh!important;
         background-color: rgba(47, 53, 49, 1);
         margin-bottom: 90px;
