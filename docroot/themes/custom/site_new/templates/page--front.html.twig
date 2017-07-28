@@ -106,18 +106,16 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header id="header" class="intro-header" style="background-image: url('{{ header_image }}')">
+<header id="header" class="intro-header">
 <div class="white"></div>
- <div class="overlay">
+ <div class="overlay"></div>
   <div class="container">
+      {{ page.title }}
     <div class="row">
-      {% if node %}
-      {% else %}
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="site-heading">
-          {{ page.title }}
-          </div>
-        </div>
+   
+       
+        
+      
         <div class="wrapping-cards">
         <div class="cards-wrapped">
         
@@ -155,9 +153,8 @@
         </div>
         </div>
         </div>
-      {% endif %}
+     
     </div>
-  </div>
   </div>
 </header>
 <div class="bg-white">
