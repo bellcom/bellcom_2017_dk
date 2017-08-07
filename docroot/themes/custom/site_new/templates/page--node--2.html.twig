@@ -105,11 +105,7 @@
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header node-header">
   <div class="container padding">
-<div class="row">
-
-<h1>Vi er Bellcom</h1>
- <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling, design og implementering af innovative hjemmesider i open source teknologi baseret på CMS platformen Drupal.</p>
-</div>
+{{ drupal_block('omosdescription') }}
     </div>
 
 </header>
@@ -145,169 +141,32 @@
          <div class="con-team-title">
           <h3>Vi er Bellcom. Vi er et team.</h3>
           <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling, design og <em>open source</em> webudvikling.</p></div>
-          <div class="employees">
+     <div class="employees">
              <!--- Employees row -->
               <div class="employees-row">
                 <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Linda Skov</h5><p>Direktør</p><hr width="40%;" style="opacity:0.6;"><a href="tel:22485919">+45 22 48 59 19</a><a href="mailto:ls@bellcom.dk">ls@bellcom.dk</a></div>
-                  <img src="{{ base_path ~ directory }}/images/avatar-linda.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Jørn Skifter Andersen</h5><p>IT-arkitekt</p><hr width="40%;" style="opacity:0.6;"><a href="tel:29907836">+45 29 90 78 36</a><a href="mailto:js@bellcom.dk">js@bellcom.dk</a></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-joern.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Franz Skaaning</h5><p>Webkonsulent</p><hr width="40%;" style="opacity:0.6;"><a href="tel:20235029">+45 20 23 50 29</a><a href="mailto:fs@bellcom.dk">fs@bellcom.dk</a></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-franz.jpg">
-                  </div>
+                    {{ drupal_view('employee') }}
                   <!--- Employee img end-->
               </div>
               <!-- Employee row end -->
               
           </div>
-          
-          <div class="employees">
-             <!--- Employees row -->
-              <div class="employees-row">
-                <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Hanne Grave</h5><p>Administrationskoordinator</p><hr width="40%;" style="opacity:0.6;"><a href="tel:77347848">+45 77 34 78 48</a><a href="mailto:hg@bellcom.dk">hg@bellcom.dk</a></div>
-                  <img src="{{ base_path ~ directory }}/images/avatar-hanne.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Berit Malmdorf</h5><p>Køkken</p><hr width="40%;" style="opacity:0.6;"></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-berit.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Mikkel Kaas</h5><p>DevOPS / System Admin</p><hr width="40%;" style="opacity:0.6;"><a href="tel:70260085">+45 70 26 00 85</a><a href="mailto:mk@bellcom.dk">mk@bellcom.dk</a></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-mikkel.jpg">
-                  </div>
-                  <!--- Employee img end-->
-              </div>
-              <!-- Employee row end -->
-              
-          </div>
-          
-           <div class="employees">
-             <!--- Employees row -->
-              <div class="employees-row">
-                <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Per Okkels</h5><p>Supporter</p><hr width="40%;" style="opacity:0.6;"><a href="tel:77347840">+45 77 34 78 40</a><a href="mailto:po@bellcom.dk">po@bellcom.dk</a></div>
-                    <img src="{{ base_path ~ directory }}/images/avatar-per.png">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Aleksander Simonsen</h5><p>Kundekonsulent</p><hr width="40%;" style="opacity:0.6;"><a href="tel:70260085">+45 61 28 78 36</a><a href="mailto:as@bellcom.dk">as@bellcom.dk</a></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-alexander.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Kristian Pedersen</h5><p>Marketing</p><hr width="40%;" style="opacity:0.6;"><a href="tel:77347843">+45 77 34 78 43</a><a href="mailto:kp@bellcom.dk">kp@bellcom.dk</a></div>
-                  <img src="{{ base_path ~ directory }}/images/avatar-kristian.jpg">
-                  </div>
-                  <!--- Employee img end-->
-              </div>
-              <!-- Employee row end -->
-              
-          </div>
+    
+        
+          <p style="text-align:left;margin-top:25px;">Estland:</p>
           
              <div class="employees">
              <!--- Employees row -->
               <div class="employees-row">
                 <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Morten Nielsen</h5><p>Søgemaskineoptimering & Sociale Medier</p><hr width="40%;" style="opacity:0.6;"><a href="tel:70260085">+45 70 26 00 85</a><a href="mailto:mt@bellcom.dk">mt@bellcom.dk</a></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-morten.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Arne Nielsen</h5><p>Kundekonsulent</p><hr width="40%;" style="opacity:0.6;"><a href="tel:77347831">+45 77 34 78 31</a><a href="mailto:st@bellcom.dk">apn@bellcom.dk</a></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-arne.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Simon Tofteby</h5><p>SoMe & Design</p><hr width="40%;" style="opacity:0.6;"><a href="tel:70260085">+45 70 26 00 85</a><a href="mailto:st@bellcom.dk">st@bellcom.dk</a></div>
-                   <img src="{{ base_path ~ directory }}/images/avatar-simon.jpg">
-                   
-                  </div>
+                    {{ drupal_view('employee_estland') }}
                   <!--- Employee img end-->
               </div>
               <!-- Employee row end -->
               
           </div>
           
-          <p style="text-align:left;margin-top:25px;">Estland:</p>
-          
-            <div class="employees">
-             <!--- Employees row -->
-              <div class="employees-row">
-                <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Dimitri Serõn</h5><hr width="40%;" style="opacity:0.6;"><a href="mailto:ds@bellcom.ee">ds@bellcom.ee</a></div>
-                   <img src="{{ base_path ~ directory }}/images/dimitri.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                <div class="employee">
-                 <div class="e-overlay"><h5>Stanislav Kutasevits</h5><hr width="40%;" style="opacity:0.6;"><a href="mailto:sk@bellcom.ee">sk@bellcom.ee</a></div>
-                   <img src="{{ base_path ~ directory }}/images/stani.jpg">
-                  </div>
-                  <!--- Employee img end-->
-                   <!--- Employee img -->
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Juulia Devadze</h5><hr width="40%;" style="opacity:0.6;"><a href="mailto:jd@bellcom.ee">jd@bellcom.ee</a></div>
-                   <img src="{{ base_path ~ directory }}/images/juliaa.jpg">
-                  </div>
-                  <!--- Employee img end-->
-              </div>
-              <!-- Employee row end -->
-              
-          </div>
-          
-            <div class="employees">
-             <!--- Employees row -->
-              <div class="employees-row">
-                <!--- Employee img -->
-<!--
-                 <div class="employee">
-                 <div class="e-overlay"><h5>Riivo Erik</h5><hr width="40%;" style="opacity:0.6;"><a href="mailto:re@bellcom.ee">re@bellcom.ee</a></div>
-                   <img src="{{ base_path ~ directory }}/images/dimitri.jpg">
-                  </div>
--->
-                  <!--- Employee img end-->
-                  
-         <div class="employee">
-                 <div class="e-overlay"><h5>Aleksei Tšatski</h5><hr width="40%;" style="opacity:0.6;"><a href="mailto:at@bellcom.ee">at@bellcom.ee</a></div>
-                   <img src="{{ base_path ~ directory }}/images/aleksei.jpg">
-                  </div>
-                   <div class="employee">
-                 
-                  </div>
-                  
-                  <div class="employee">
-                 
-                  </div>
-                  
-            
-              </div>
-              <!-- Employee row end -->
-              
-          </div>
-          
+
       </div>
         
       <div class="cta-block">

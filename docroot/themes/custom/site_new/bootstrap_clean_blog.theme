@@ -49,7 +49,7 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
     'flickr' => theme_get_setting('bootstrap_clean_blog_social_flickr'),
     'linkedin' => theme_get_setting('bootstrap_clean_blog_social_linkedin'),
   ]);
-
+  
 }
 
 /**
@@ -67,7 +67,7 @@ function bootstrap_clean_blog_preprocess_node(&$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
+ * Implements bootstrap_clean_blog_hook_theme_suggestions_HOOK_alter().
  */
 function bootstrap_clean_blog_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 

@@ -105,11 +105,8 @@
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header node-header">
   <div class="container padding">
-<div class="row">
+{{ drupal_block('supportdescription') }}
 
-<h1>Vi er Bellcom</h1>
- <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling, design og implementering af innovative hjemmesider i open source teknologi baseret på CMS platformen Drupal.</p>
-</div>
     </div>
 
 </header>
@@ -146,14 +143,7 @@
           
       </div>
    
-       <div class="some-content">
-       <div class="content-title">
-      <h3>Bellcom tilbyder fuld support af egenudviklede applikationer</h3>
-          <p>Med til supporten hører, at vi opsætter proaktiv overvågning af løsningen, idet vi hvert 5. minut kontrollerer, at udvalgte ord findes ved kald til hjemmesiden. Herved opdages de situationer, hvor serveren kører, mens applikationen af ukendte årsager, ikke viser indhold. </p>
-       </div>
-      
-    
-        </div>
+    {{ drupal_block('supportindhold') }}
         
           <!-- Customer Logos -->
       <div class="title-customer">

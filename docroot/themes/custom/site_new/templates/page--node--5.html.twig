@@ -105,11 +105,7 @@
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header node-header">
   <div class="container padding">
-<div class="row">
-
-<h1>Vi er Bellcom</h1>
- <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling, design og implementering af innovative hjemmesider i open source teknologi baseret på CMS platformen Drupal.</p>
-</div>
+{{ drupal_block('udviklingdescription') }}
     </div>
 
 </header>
@@ -146,41 +142,7 @@
           
       </div>
    
-       <div class="some-content">
-       <div class="content-title">
-       <h3>Vi har stor viden indenfor..</h3>
-       <p>Virksomhedens udviklere består af både front- og backendudviklere, der i parløb sikrer projekternes fremdrift med brug af udviklingsmodeller og projektværktøjer som ScrumDo.</p>
-       </div>
-      
-        <div class="tabel">
-            
-            <div class="row-four">
-                
-                <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20Drupal%20løsning"><div class="competence drupal"><p>Drupal</p></div></a>
-                <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20ezPublish%20løsning"><div class="competence ez"><p>ezPublish</p></div></a>
-                <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20Wordpress%20løsning"><div class="competence wordpress"><p>Wordpress</p></div></a>
-                <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20OScommerce%20løsning"><div class="competence osc"><p>osCommerce</p></div></a>
-                
-            </div>
-            
-              <div class="row-four">
-                
-                  <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20SugerCRM%20løsning"><div class="competence sugar"><p>SugarCRM</p></div></a>
-                  <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20Symfony%20løsning"><div class="competence symf"><p>Symfony</p></div></a>
-                  <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20PrestaShop%20løsning"><div class="competence presta"><p>PrestaShop</p></div></a>
-                  <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20Asterisk%20løsning"><div class="competence aste"><p>Asterisk</p></div></a>
-                
-            </div>
-            
-            <div class="row-four">
-                <a class="competence-link" href="kontakt#edit-subject-0-value=Ang%2e%20Din%20skæddersyet%20løsning"><div class="competence bas"><p>Skræddersyede løsninger</p></div></a>
-                <a class="competence-link" href="kontakt"><div class="competence bas"><p>Skuffesystemer</p></div></a>
-                
-            </div>
-             
-            
-        </div>
-        </div>
+      {{ drupal_block('produkter') }}
         
          
       <div class="cta-block os2">
