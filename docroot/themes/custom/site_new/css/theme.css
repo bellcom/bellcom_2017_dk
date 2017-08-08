@@ -613,7 +613,12 @@
     margin-right: 20px;
 }
 
-@media screen and (min-width: 880px) {
+@media only screen and (min-width: 880px) {
+    
+    .node--type-page .cta-block {
+        margin-top: 0px!important;
+        margin-bottom: 40px;
+    }
     #customer-logos a {
         padding-top: 70px;
         padding-bottom: 65px;
@@ -688,6 +693,7 @@
         text-decoration: none;
         transition: all .15s ease;
     }
+}
     .view-id-kategori .views-field-name {
         margin-top: 10px;
         padding-bottom: 10px;
@@ -696,34 +702,7 @@
         padding-right: 10px;
         border-bottom: 1px solid #ddd;
     }
-    .container-fluid:before,
-    .container-fluid:after,
-    .row:before,
-    .row:after,
-    .form-horizontal .form-group:before,
-    .form-horizontal .form-group:after,
-    .btn-toolbar:before,
-    .btn-toolbar:after,
-    .btn-group-vertical > .btn-group:before,
-    .btn-group-vertical > .btn-group:after,
-    .nav:before,
-    .nav:after,
-    .navbar:before,
-    .navbar:after,
-    .navbar-header:before,
-    .navbar-header:after,
-    .navbar-collapse:before,
-    .navbar-collapse:after,
-    .pager:before,
-    .pager:after,
-    .panel-body:before,
-    .panel-body:after,
-    .modal-header:before,
-    .modal-header:after,
-    .modal-footer:before,
-    .modal-footer:after {
-        content: none;
-    }
+   
     .navbar:before {
         display: flex;
         content: none;
@@ -1363,6 +1342,10 @@ Pricing table
 .price-active h4 {
   color: #36d7ac;
 }
+    
+    .node--type-page .title-customer {
+        margin-top: 0px!important;
+    }
     
     .main-btn {
             text-decoration: none;
@@ -3260,7 +3243,7 @@ Pricing table
             display: none;
         }
     }
-    @media screen and (max-width: 1299px) {
+    @media only screen and (max-width: 1299px) {
         .sidebar-lane {
             width: 420px!important;
         }
@@ -3277,7 +3260,7 @@ Pricing table
             height: 70vh;
         }
     }
-    @media screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) {
         .quoty {
             display: block!important;
         }
