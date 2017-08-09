@@ -3243,11 +3243,7 @@ Pricing table
             display: none;
         }
     }
-@media only screen and (min-width: 1240px) {
-    .container, .container-lg {
-         max-width: 1240px!important;
-    }
-}
+
     @media only screen and (max-width: 1299px) {
         .sidebar-lane {
             width: 420px!important;
@@ -3310,4 +3306,8 @@ Pricing table
         #udvikling {
             height: 450px;
         }
+         .container, .container-lg {
+         max-width: 1240px!important;
+             
+    }
     }
