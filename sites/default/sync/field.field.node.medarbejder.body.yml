@@ -1,0 +1,22 @@
+uuid: 39bcba48-1478-4ada-ad16-d4e0da3d6227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.medarbejder
+  module:
+    - text
+id: node.medarbejder.body
+field_name: body
+entity_type: node
+bundle: medarbejder
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

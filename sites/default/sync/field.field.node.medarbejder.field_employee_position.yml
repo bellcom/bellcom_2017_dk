@@ -1,0 +1,21 @@
+uuid: 57a650dc-b4a4-44c8-9c23-b7ce8b726f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employee_position
+    - node.type.medarbejder
+  module:
+    - text
+id: node.medarbejder.field_employee_position
+field_name: field_employee_position
+entity_type: node
+bundle: medarbejder
+label: employee-position
+description: 'Tilføj medarbejderens title'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

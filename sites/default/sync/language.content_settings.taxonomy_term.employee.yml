@@ -1,0 +1,11 @@
+uuid: c85db2d5-8627-4427-81f3-5a2e708dd322
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.employee
+id: taxonomy_term.employee
+target_entity_type_id: taxonomy_term
+target_bundle: employee
+default_langcode: site_default
+language_alterable: false

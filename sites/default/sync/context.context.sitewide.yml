@@ -1,0 +1,13 @@
+uuid: 04a22100-5971-4f21-a579-d6bfcff6c2c2
+langcode: en
+status: true
+dependencies: {  }
+name: sitewide
+label: Kontakt
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions: {  }
+reactions: {  }
+weight: 0

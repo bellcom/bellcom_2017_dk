@@ -1,0 +1,11 @@
+uuid: f7d69655-fcce-4369-bb7e-cdf20548ac86
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.vaerk
+id: node.vaerk
+target_entity_type_id: node
+target_bundle: vaerk
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,31 @@
+uuid: e1d355bd-bc35-4942-a73e-b05a9097a3ec
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:fd8e3a0d-9ea2-4fab-9478-f5bfb01105bc'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: availability
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:fd8e3a0d-9ea2-4fab-9478-f5bfb01105bc'
+settings:
+  id: 'block_content:fd8e3a0d-9ea2-4fab-9478-f5bfb01105bc'
+  label: Availability
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /drupal
+    negate: false
+    context_mapping: {  }

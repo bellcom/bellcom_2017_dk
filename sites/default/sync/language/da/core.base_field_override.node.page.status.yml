@@ -1,0 +1,5 @@
+label: Publiceringsstatus
+description: 'En boolsk værdi som angiver hvorvidt indholdselementets er udgivet.'
+settings:
+  on_label: Tilsluttet
+  off_label: Afbrudt

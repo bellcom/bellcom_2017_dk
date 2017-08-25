@@ -1,0 +1,9 @@
+uuid: 4fed091f-632e-40dd-86c9-171cfacc6886
+langcode: da
+status: true
+dependencies: {  }
+name: 'Type af værker'
+vid: type_af_vaerker
+description: ''
+hierarchy: 0
+weight: 0

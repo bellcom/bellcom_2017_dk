@@ -1,0 +1,17 @@
+uuid: 8de9dbd1-4152-4d74-9482-79d39af8bfd4
+langcode: en
+status: true
+dependencies: {  }
+id: vaerk_reviewer
+label: 'Værk reviewer'
+weight: 18
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'edit any vaerk content'
+  - 'delete any vaerk content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_published transition'
+  - 'use published_archived transition'

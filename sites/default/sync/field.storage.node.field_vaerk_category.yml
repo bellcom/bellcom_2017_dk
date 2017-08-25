@@ -1,0 +1,20 @@
+uuid: b464bbd3-0d2a-407e-a1bb-04594f5e4fe9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_vaerk_category
+field_name: field_vaerk_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

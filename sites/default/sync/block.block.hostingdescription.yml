@@ -1,0 +1,31 @@
+uuid: 39bc5292-ddba-4548-907f-702aa44f3ab4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:2899e6b8-32bf-45be-b66d-1d466015de86'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: hostingdescription
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:2899e6b8-32bf-45be-b66d-1d466015de86'
+settings:
+  id: 'block_content:2899e6b8-32bf-45be-b66d-1d466015de86'
+  label: 'Hosting description'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /hosting
+    negate: false
+    context_mapping: {  }

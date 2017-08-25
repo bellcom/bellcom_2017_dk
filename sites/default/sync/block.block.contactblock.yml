@@ -1,0 +1,23 @@
+uuid: 62e13384-90ae-43e0-9a54-d6967a1d04c0
+langcode: en
+status: false
+dependencies:
+  config:
+    - contact.form.sticky_box
+  module:
+    - contact_block
+  theme:
+    - bootstrap_clean_blog
+id: contactblock
+theme: bootstrap_clean_blog
+region: '-1'
+weight: -12
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact block'
+  provider: contact_block
+  label_display: '0'
+  contact_form: sticky_box
+visibility: {  }

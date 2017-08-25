@@ -1,0 +1,21 @@
+uuid: ab6f39b8-dc54-41b4-93ce-12a466e9335b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_customer_logos
+    - node.type.product
+  module:
+    - text
+id: node.product.field_customer_logos
+field_name: field_customer_logos
+entity_type: node
+bundle: product
+label: 'Customer logos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

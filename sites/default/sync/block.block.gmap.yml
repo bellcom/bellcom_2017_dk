@@ -1,0 +1,25 @@
+uuid: c4fd09a5-01a8-434b-9314-c4dd0fb21a30
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:41786763-3500-442e-bd99-73551f23038a'
+  module:
+    - block_content
+  theme:
+    - bootstrap_clean_blog
+id: gmap
+theme: bootstrap_clean_blog
+region: '-1'
+weight: -10
+provider: null
+plugin: 'block_content:41786763-3500-442e-bd99-73551f23038a'
+settings:
+  id: 'block_content:41786763-3500-442e-bd99-73551f23038a'
+  label: Gmap
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

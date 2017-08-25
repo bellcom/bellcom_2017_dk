@@ -1,0 +1,7 @@
+uuid: 548f37a9-9500-4fec-bb72-a564311c55bc
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_message_sticky_box_form
+captchaType: recaptcha/reCAPTCHA
+label: contact-message-sticky-box-form

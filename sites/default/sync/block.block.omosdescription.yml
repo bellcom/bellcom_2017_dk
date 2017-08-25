@@ -1,0 +1,31 @@
+uuid: 9a5f0c9e-3686-4e8e-8348-52cbca51eca8
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:e4811d5b-ff6f-4595-a078-a05bb58c404d'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: omosdescription
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:e4811d5b-ff6f-4595-a078-a05bb58c404d'
+settings:
+  id: 'block_content:e4811d5b-ff6f-4595-a078-a05bb58c404d'
+  label: 'Om os description'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /om-os
+    negate: false
+    context_mapping: {  }

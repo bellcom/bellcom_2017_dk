@@ -1,0 +1,14 @@
+uuid: 24b7aa5c-e824-4a00-aa93-de4b55fea480
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vaerk_creator
+  module:
+    - user
+id: user_remove_role_action.vaerk_creator
+label: 'Remove the Værk creator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: vaerk_creator

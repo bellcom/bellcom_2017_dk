@@ -1,0 +1,31 @@
+uuid: 109db2c4-affe-48a2-85f8-967cf0162275
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:2a515ec8-99db-49e6-9839-b4393bb5b61c'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: kunderdescription
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:2a515ec8-99db-49e6-9839-b4393bb5b61c'
+settings:
+  id: 'block_content:2a515ec8-99db-49e6-9839-b4393bb5b61c'
+  label: 'Kunder description'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /kunder
+    negate: false
+    context_mapping: {  }

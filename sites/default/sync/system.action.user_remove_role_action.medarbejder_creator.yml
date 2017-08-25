@@ -1,0 +1,14 @@
+uuid: e7025461-becd-4571-834d-409a199e8ac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.medarbejder_creator
+  module:
+    - user
+id: user_remove_role_action.medarbejder_creator
+label: 'Remove the Medarbejder creator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: medarbejder_creator

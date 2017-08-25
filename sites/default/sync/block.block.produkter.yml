@@ -1,0 +1,31 @@
+uuid: ede4421c-60f3-4c12-b108-51fa57107bae
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:e436fce8-f727-4ea4-960e-8c3c8b91be80'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: produkter
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:e436fce8-f727-4ea4-960e-8c3c8b91be80'
+settings:
+  id: 'block_content:e436fce8-f727-4ea4-960e-8c3c8b91be80'
+  label: produkter
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /udvikling
+    negate: false
+    context_mapping: {  }

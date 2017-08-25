@@ -1,0 +1,8 @@
+uuid: f33f1694-b329-4a5b-8551-1efe142f7f30
+langcode: en
+status: true
+dependencies: {  }
+id: category_blog
+label: 'Category blog'
+revision: 1
+description: 'Shows all categories in blog page'

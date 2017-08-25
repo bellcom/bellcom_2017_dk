@@ -1,0 +1,17 @@
+uuid: 27d0d229-dfc6-44f7-8fdd-53bba5d93e72
+langcode: en
+status: true
+dependencies: {  }
+id: medarbejder_reviewer
+label: 'Medarbejder reviewer'
+weight: 20
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'edit any medarbejder content'
+  - 'delete any medarbejder content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_published transition'
+  - 'use published_archived transition'

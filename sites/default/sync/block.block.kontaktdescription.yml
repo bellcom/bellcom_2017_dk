@@ -1,0 +1,31 @@
+uuid: 007c6598-bdec-46c1-bf8d-930d267b2f5f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:e9f7d667-e46d-4439-bbc7-d32efb21fa9f'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: kontaktdescription
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:e9f7d667-e46d-4439-bbc7-d32efb21fa9f'
+settings:
+  id: 'block_content:e9f7d667-e46d-4439-bbc7-d32efb21fa9f'
+  label: 'Kontakt description'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /kontakt
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,27 @@
+uuid: 006abf71-77a9-4246-a1e0-b723f5d67eea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vaerk.body
+    - node.type.vaerk
+  module:
+    - text
+    - user
+id: node.vaerk.teaser
+targetEntityType: node
+bundle: vaerk
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true

@@ -1,0 +1,31 @@
+uuid: 22cdf612-9756-45c9-abec-aaeec731e44d
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:a69091d1-eb5b-42e7-a314-6f0bd51dac4b'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: casesdescription
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:a69091d1-eb5b-42e7-a314-6f0bd51dac4b'
+settings:
+  id: 'block_content:a69091d1-eb5b-42e7-a314-6f0bd51dac4b'
+  label: 'Cases description'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /cases
+    negate: false
+    context_mapping: {  }

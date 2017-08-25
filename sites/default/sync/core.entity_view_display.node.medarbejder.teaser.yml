@@ -1,0 +1,27 @@
+uuid: 973a5f4f-fd83-46b3-a405-1c02d636bb2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.medarbejder.body
+    - node.type.medarbejder
+  module:
+    - text
+    - user
+id: node.medarbejder.teaser
+targetEntityType: node
+bundle: medarbejder
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true

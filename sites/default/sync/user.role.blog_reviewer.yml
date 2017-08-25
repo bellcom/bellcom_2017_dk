@@ -1,0 +1,17 @@
+uuid: a60a0fd9-4487-4ac9-b7bd-5ffcdb60df1a
+langcode: en
+status: true
+dependencies: {  }
+id: blog_reviewer
+label: 'Blog reviewer'
+weight: 12
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'edit any blog content'
+  - 'delete any blog content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_published transition'
+  - 'use published_archived transition'

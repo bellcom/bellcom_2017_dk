@@ -1,0 +1,31 @@
+uuid: 0ac89c19-6914-434f-9ed7-68a56465dfc7
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:a81fb585-0aa4-45cd-9518-3f4093a63c05'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: supportindhold
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:a81fb585-0aa4-45cd-9518-3f4093a63c05'
+settings:
+  id: 'block_content:a81fb585-0aa4-45cd-9518-3f4093a63c05'
+  label: 'Support indhold'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /support
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,4 @@
+settings:
+  default_form_submit_label: Indsend
+  default_wizard_start_label: Start
+  default_preview_next_button_label: Gennemse

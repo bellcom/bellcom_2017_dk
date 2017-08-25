@@ -1,0 +1,56 @@
+uuid: 34c54f95-a944-457e-be49-46f6a9d6e906
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vaerk.body
+    - field.field.node.vaerk.field_vaerk_category
+    - field.field.node.vaerk.field_vaerk_image
+    - field.field.node.vaerk.field_vaerk_link
+    - node.type.vaerk
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.vaerk.default
+targetEntityType: node
+bundle: vaerk
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_vaerk_category:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_vaerk_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_vaerk_link:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  links:
+    weight: 100
+hidden:
+  langcode: true

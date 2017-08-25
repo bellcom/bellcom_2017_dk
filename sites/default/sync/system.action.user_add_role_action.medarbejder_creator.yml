@@ -1,0 +1,14 @@
+uuid: 8a4f0385-9d56-433a-96c2-ce64cb02e3a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.medarbejder_creator
+  module:
+    - user
+id: user_add_role_action.medarbejder_creator
+label: 'Add the Medarbejder creator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: medarbejder_creator

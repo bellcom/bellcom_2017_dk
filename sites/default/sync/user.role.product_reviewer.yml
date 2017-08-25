@@ -1,0 +1,18 @@
+uuid: 196b71cd-ea75-415e-9535-13ad93b3f9a1
+langcode: en
+status: true
+dependencies: {  }
+id: product_reviewer
+label: 'Product reviewer'
+weight: 16
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'edit any product content'
+  - 'delete any product content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_published transition'
+  - 'use published_archived transition'
+  - 'use text format full_html'

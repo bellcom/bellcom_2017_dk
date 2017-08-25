@@ -1,0 +1,31 @@
+uuid: 08155093-7b92-4c7b-9903-62855bf6e6aa
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:11a2c5d8-9b44-49e0-8e37-5e8bff621f6a'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: hostingprodukter
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:11a2c5d8-9b44-49e0-8e37-5e8bff621f6a'
+settings:
+  id: 'block_content:11a2c5d8-9b44-49e0-8e37-5e8bff621f6a'
+  label: 'hosting produkter'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /hosting
+    negate: false
+    context_mapping: {  }

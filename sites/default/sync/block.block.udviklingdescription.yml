@@ -1,0 +1,31 @@
+uuid: f5b22ba2-8b4e-4c1f-a7c6-7dd912ced90e
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:afa2e02a-600a-48bf-8929-cd5b75ab0421'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_clean_blog
+id: udviklingdescription
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'block_content:afa2e02a-600a-48bf-8929-cd5b75ab0421'
+settings:
+  id: 'block_content:afa2e02a-600a-48bf-8929-cd5b75ab0421'
+  label: 'Udvikling description'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /udvikling
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,28 @@
+uuid: aa2be52d-25a8-487a-91b6-6966256e357b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vaerk_category
+    - node.type.vaerk
+    - taxonomy.vocabulary.type_af_vaerker
+id: node.vaerk.field_vaerk_category
+field_name: field_vaerk_category
+entity_type: node
+bundle: vaerk
+label: vaerk-category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      type_af_vaerker: type_af_vaerker
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

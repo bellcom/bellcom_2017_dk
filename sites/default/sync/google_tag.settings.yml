@@ -1,0 +1,28 @@
+container_id: GTM-MKNNG7H
+path_toggle: 'exclude listed'
+path_list: "/admin*\n/batch*\n/node/add*\n/node/*/edit\n/node/*/delete\n/user/*/edit*\n/user/*/cancel*"
+role_toggle: 'exclude listed'
+role_list:
+  anonymous: '0'
+  authenticated: '0'
+  administrator: '0'
+  layout_manager: '0'
+  media_creator: '0'
+  media_manager: '0'
+  landing_page_creator: '0'
+  landing_page_reviewer: '0'
+  page_creator: '0'
+  page_reviewer: '0'
+  blog_creator: '0'
+  blog_reviewer: '0'
+  webform_creator: '0'
+  webform_reviewer: '0'
+status_toggle: 'exclude listed'
+status_list: "403\n404"
+compact_snippet: true
+include_file: true
+data_layer: dataLayer
+whitelist_classes: "google\nnonGooglePixels\nnonGoogleScripts\nnonGoogleIframes"
+blacklist_classes: "customScripts\ncustomPixels"
+_core:
+  default_config_hash: FWqdCqo-h-7uvALmVaNWL5tt4OZL5Wjnsdi6HpDJ13w

@@ -1,0 +1,14 @@
+uuid: dd9a7354-a228-42e6-8067-3b5a93bd54a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.medarbejder_reviewer
+  module:
+    - user
+id: user_remove_role_action.medarbejder_reviewer
+label: 'Remove the Medarbejder reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: medarbejder_reviewer

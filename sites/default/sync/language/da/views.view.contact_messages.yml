@@ -1,0 +1,45 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Udfør
+          reset_button_label: Gendan
+          exposed_sorts_label: 'Sortér efter'
+          sort_asc_label: Stigende
+          sort_desc_label: Faldende
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Antal elementer'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskydning
+          tags:
+            previous: '‹ forrige'
+            next: 'næste ›'
+            first: '« første'
+            last: 'sidste »'
+      fields:
+        message_bulk_form:
+          action_title: Handling
+        subject:
+          label: Emne
+          separator: ', '
+        name:
+          separator: ', '
+        contact_form_label:
+          label: Kontaktformular
+        created:
+          label: Oprettet
+        operations:
+          label: Handlinger
+      filters:
+        contact_form:
+          expose:
+            label: Kontaktformular
+  page_1:
+    display_title: Side
+    display_options:
+      menu:
+        title: Vis

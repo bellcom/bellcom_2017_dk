@@ -1,0 +1,36 @@
+uuid: af151d51-31a3-4103-a916-d8d377915c82
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.category_blog
+    - field.field.block_content.category_blog.body
+  module:
+    - text
+    - workbench_moderation
+id: block_content.category_blog.default
+targetEntityType: block_content
+bundle: category_blog
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

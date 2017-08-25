@@ -1,0 +1,28 @@
+uuid: 760fa01e-70eb-4566-8b89-351f652e3465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_afdeling
+    - node.type.medarbejder
+    - taxonomy.vocabulary.employee
+id: node.medarbejder.field_afdeling
+field_name: field_afdeling
+entity_type: node
+bundle: medarbejder
+label: afdeling
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      employee: employee
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

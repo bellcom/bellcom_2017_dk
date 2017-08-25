@@ -1,0 +1,26 @@
+uuid: 73689b9d-d471-462c-b7cc-7991a8283ab9
+langcode: en
+status: true
+dependencies: {  }
+id: medarbejder_creator
+label: 'Medarbejder creator'
+weight: 19
+is_admin: null
+permissions:
+  - 'create medarbejder content'
+  - 'edit own medarbejder content'
+  - 'view medarbejder revisions'
+  - 'view own unpublished content'
+  - 'create url aliases'
+  - 'access panels in-place editing'
+  - 'change layouts in place editing'
+  - 'administer panelizer node medarbejder content'
+  - 'administer panelizer node medarbejder layout'
+  - 'use text format rich_text'
+  - 'access media_browser entity browser pages'
+  - 'access image_browser entity browser pages'
+  - 'view any unpublished content'
+  - 'use draft_draft transition'
+  - 'use draft_needs_review transition'
+  - 'use needs_review_needs_review transition'
+  - 'view latest version'

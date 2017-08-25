@@ -1,0 +1,70 @@
+uuid: cd01a2f7-0a77-44b8-9f43-c467cf37f375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.medarbejder.body
+    - field.field.node.medarbejder.field_afdeling
+    - field.field.node.medarbejder.field_employee_email
+    - field.field.node.medarbejder.field_employee_phone
+    - field.field.node.medarbejder.field_employee_photo
+    - field.field.node.medarbejder.field_employee_position
+    - node.type.medarbejder
+  module:
+    - image
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.medarbejder.default
+targetEntityType: node
+bundle: medarbejder
+mode: default
+content:
+  field_afdeling:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_employee_email:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_employee_phone:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_employee_photo:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_employee_position:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true

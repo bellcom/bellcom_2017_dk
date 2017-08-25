@@ -1,0 +1,14 @@
+uuid: c8c3b706-2085-4682-bfa3-382263372f30
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vaerk_creator
+  module:
+    - user
+id: user_add_role_action.vaerk_creator
+label: 'Add the Værk creator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: vaerk_creator

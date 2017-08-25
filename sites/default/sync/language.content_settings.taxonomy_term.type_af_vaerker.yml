@@ -1,0 +1,11 @@
+uuid: 989e3739-fcd3-4418-a55f-96c096e220dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.type_af_vaerker
+id: taxonomy_term.type_af_vaerker
+target_entity_type_id: taxonomy_term
+target_bundle: type_af_vaerker
+default_langcode: site_default
+language_alterable: false

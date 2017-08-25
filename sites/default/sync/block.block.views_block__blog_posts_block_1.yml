@@ -1,0 +1,32 @@
+uuid: 98840185-5e77-4425-a4eb-cbcfe795b580
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.blog_posts
+  module:
+    - ctools
+    - views
+  theme:
+    - bootstrap_clean_blog
+id: views_block__blog_posts_block_1
+theme: bootstrap_clean_blog
+region: '-1'
+weight: 4
+provider: null
+plugin: 'views_block:blog_posts-block_1'
+settings:
+  id: 'views_block:blog_posts-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,4 @@
+title: Kontakt
+settings:
+  form_submit_label: 'Send besked'
+  confirmation_message: 'Din besked er blevet sendt.'

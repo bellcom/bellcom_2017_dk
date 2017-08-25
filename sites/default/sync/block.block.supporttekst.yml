@@ -1,0 +1,25 @@
+uuid: 75d9852e-249b-45ea-8061-79e3b616553f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:31d9aff6-0feb-42d1-a4dc-cfbd839b1099'
+  module:
+    - block_content
+  theme:
+    - bootstrap_clean_blog
+id: supporttekst
+theme: bootstrap_clean_blog
+region: '-1'
+weight: -4
+provider: null
+plugin: 'block_content:31d9aff6-0feb-42d1-a4dc-cfbd839b1099'
+settings:
+  id: 'block_content:31d9aff6-0feb-42d1-a4dc-cfbd839b1099'
+  label: Support
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

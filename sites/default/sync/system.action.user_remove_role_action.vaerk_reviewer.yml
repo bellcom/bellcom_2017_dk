@@ -1,0 +1,14 @@
+uuid: 839a0656-6328-4fbf-9a55-839fd3c7fe8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vaerk_reviewer
+  module:
+    - user
+id: user_remove_role_action.vaerk_reviewer
+label: 'Remove the Værk reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: vaerk_reviewer

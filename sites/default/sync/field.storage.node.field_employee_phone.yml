@@ -1,0 +1,20 @@
+uuid: d1b021b3-c0f7-49f0-b7a8-f93f30e81c2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_employee_phone
+field_name: field_employee_phone
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

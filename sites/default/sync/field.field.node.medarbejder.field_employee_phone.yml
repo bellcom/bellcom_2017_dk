@@ -1,0 +1,25 @@
+uuid: 325dde48-796d-42df-9d59-127336523e31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employee_phone
+    - node.type.medarbejder
+id: node.medarbejder.field_employee_phone
+field_name: field_employee_phone
+entity_type: node
+bundle: medarbejder
+label: employee-phone
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 65069488
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

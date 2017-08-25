@@ -1,0 +1,25 @@
+uuid: 9ec48b52-e85a-48be-a55f-27a323dd33f3
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:0b0a8f54-9835-4473-b1d4-2ba13d570dd1'
+  module:
+    - block_content
+  theme:
+    - bootstrap_clean_blog
+id: udviklingstekst
+theme: bootstrap_clean_blog
+region: '-1'
+weight: -1
+provider: null
+plugin: 'block_content:0b0a8f54-9835-4473-b1d4-2ba13d570dd1'
+settings:
+  id: 'block_content:0b0a8f54-9835-4473-b1d4-2ba13d570dd1'
+  label: Udvikling
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
