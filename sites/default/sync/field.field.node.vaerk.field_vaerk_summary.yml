@@ -1,0 +1,21 @@
+uuid: 9eb1ecc0-cb05-414e-ab59-08f57416b5a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vaerk_summary
+    - node.type.vaerk
+  module:
+    - text
+id: node.vaerk.field_vaerk_summary
+field_name: field_vaerk_summary
+entity_type: node
+bundle: vaerk
+label: vaerk_summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

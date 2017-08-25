@@ -16,6 +16,9 @@
     border-radius: 4px;
     margin-bottom: 120px;
 }
+.node--type-vaerk .field--name-field-vaerk-summary {
+    display: none;
+}
 
 .path-taxonomy .page-header {
     height: 20vh;

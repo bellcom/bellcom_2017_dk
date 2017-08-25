@@ -1,0 +1,19 @@
+uuid: 001d7eb4-c804-4d99-96c2-985cfa2708fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_vaerk_summary
+field_name: field_vaerk_summary
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
