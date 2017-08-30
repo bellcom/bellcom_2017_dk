@@ -32,6 +32,7 @@
     display: none;
 }
 
+
 .field--name-field-product-image-label {
     width: 100px;
     height: 100px;
@@ -2929,6 +2930,9 @@ Pricing table
         #block-frontpagefullwidthimg img {
             height: 300px!important;
         }
+        .tabel-hosting .competence {
+    height: 100%;
+}
         .cta-block,
         .con-img-right,
         .customer-logos,
