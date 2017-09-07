@@ -20,6 +20,9 @@
     display: none;
 }
 
+.node--type-vaerk .post-meta {
+    display: none;
+}
 .path-taxonomy .page-header {
     height: 20vh;
 }
