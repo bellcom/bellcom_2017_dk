@@ -62,44 +62,8 @@
  */
 #}
 
-
-<!---- Fixed Contact Box ---->
-
-<div class="contact-box">
-<div class="contact-box-label">
-    <a>Kontakt <i class="fa fa-envelope" aria-hidden="true"></i>
-</a>
-</div>
-<div class="contact-box-content">
-     <dd>{{ drupal_block('contactblock') }}</dd>
-</div>
-</div>
-
-<!--- End of Fixed Contact Box -->
-
-<nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed" id="light">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">{{ 'Toggle navigation'|t}}</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar short-bar"></span>
-      </button>
-      {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      {{ page.header.bootstrap_clean_blog_main_menu }}
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-</nav>
+{% include 'contact_block.html.twig' %}
+{% include 'navbar.html.twig' %}
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
@@ -130,8 +94,8 @@
        
        <!-- Customer Logos -->
       <div class="title-customer">
-          <h3>Vi har kunder i hele landet.</h3>
-          <p>Er du vores næste kunde? Vi gør en stor dyd ud af at pleje vores kunder bedst muligt.</p>
+          <h3>{{ 'We have customers from all over the country.'|t }}</h3>
+          <p>{{ 'Are you our next customer? We make a great virtue of caring for our customers as best as possible.'|t }}</p>
       </div>
       <div class="customer-logos no-top-margin">
            {{ page.customer }}
@@ -139,8 +103,8 @@
       
       <div class="con-team">
          <div class="con-team-title">
-          <h3>Vi er Bellcom. Vi er et team.</h3>
-          <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling, design og <em>open source</em> webudvikling.</p></div>
+          <h3>{{ 'We are Bellcom. We are a team.'|t }}</h3>
+          <p>{{ 'Our primary competencies are technical advice, agile development, design and <em> open source </ em> web development.'|t }}</p></div>
      <div class="employees">
              <!--- Employees row -->
               <div class="employees-row">
@@ -176,47 +140,5 @@
   </div>
 </div>
 
-<!-- Footer -->
-<footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-sm-3">
-         {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
-       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
-        {# Social buttons block #}
-        {% block social_buttons %}
-        {% if social_links %}
-        <ul class="list-inline">
-          {% for network, url in social_links %}
-          <li>
-            <a target="_blank" href="{{ url }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {% endblock %}
-           </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Menu</h6>
-          <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Andet</h6>
-          <dd>{{ drupal_block('andet') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
-          {{ drupal_block('views_block__footer_blog_block_1') }}
-          </div>
- 
-    
-    </div>
-  </div>
-</footer>
+{% include 'footer.html.twig' %}
+

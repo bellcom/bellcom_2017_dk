@@ -1,0 +1,74 @@
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-sm-3">
+         {% if site_name %}
+        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
+      {% endif %}
+       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
+       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">{{ 'Tel.'|t }}: 70 26 00 85</a> <br><br> {{ 'Mon-Fri'|t }}: 09:00 - 17:00</bt></p>
+        {# Social buttons block #}
+        {% block social_buttons %}
+        {% if social_links %}
+        <ul class="list-inline">
+          {% for network, url in social_links %}
+          <li>
+            <a target="_blank" href="{{ url }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endblock %}
+           </div>
+          <div class="col-6 col-sm-3 na-mobile">
+          <h6>{{ 'Menu'|t }}</h6>
+          <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
+          </div>
+          <div class="col-6 col-sm-3 na-mobile">
+          <h6>{{ 'Other'|t }}</h6>
+          <dd>{{ drupal_block('andet') }}</dd>
+          </div>
+        <div class="col-6 col-sm-3 na-mobile"><h6>{{ 'Latest blog posts'|t }}</h6>
+          {{ drupal_block('views_block__footer_blog_block_1') }}
+          </div>
+ 
+    
+    </div>
+  </div>
+</footer>
+
+<script>
+var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+for(var i = 0; i < hashParams.length; i++){
+    var p = hashParams[i].split('=');
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);
+}
+
+</script>
+<script>
+
+function initMap() {
+        var uluru = {lat: 55.4872883, lng: 9.471305900000061};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru,
+            disableDefaultUI: true
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+            icon: 'http://svgshare.com/i/zF.svg',
+          map: map
+        });
+      }
+</script>
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
+    </script>
+

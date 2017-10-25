@@ -62,13 +62,6 @@
  */
 #}
 
-
-<!---- Fixed Contact Box ---->
-
-
-
-<!--- End of Fixed Contact Box -->
-
 <nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed" id="light">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -97,7 +90,7 @@
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header blog-header">
-    <div class="topbanner"><div class="banner-row"><p>Læs mere om hvilke services vi tilbyder</p>|<a href="/home" class="banner-link">Klik her</a></div></div>
+    <div class="topbanner"><div class="banner-row"><p>{{ 'Læs mere om hvilke services vi tilbyder'|t }}</p>|<a href="/home" class="banner-link">{{ 'Klik her'|t }}</a></div></div>
 
 </header>
 
@@ -124,7 +117,7 @@
     </div>
     <div class="sidebar-lane">
     <div class="sidebar-blog">
-        <div class="sidebar-title"><h5>Seneste indlæg</h5>
+        <div class="sidebar-title"><h5>{{ 'Seneste indlæg'|t }}</h5>
        
         </div>
           <dd class="blog-links">{{ drupal_block('views_block__teasers_block_1') }}</dd>
@@ -135,61 +128,5 @@
 <section id="endfixedposition"></section>
 </div>
 
-<!-- Footer -->
-<footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-sm-3">
-         {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
-       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
-        {# Social buttons block #}
-        {% block social_buttons %}
-        {% if social_links %}
-        <ul class="list-inline">
-          {% for network, url in social_links %}
-          <li>
-            <a target="_blank" href="{{ url }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {% endblock %}
-           </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Menu</h6>
-          <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Andet</h6>
-          <dd>{{ drupal_block('andet') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
-          {{ drupal_block('views_block__footer_blog_block_1') }}
-          </div>
- 
-    
-    </div>
-  </div>
-</footer>
+{% include 'footer.html.twig' %}
 
-<script>
-var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-for(var i = 0; i < hashParams.length; i++){
-    var p = hashParams[i].split('=');
-    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
-}
-
-</script>
-
-
- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
-    </script>

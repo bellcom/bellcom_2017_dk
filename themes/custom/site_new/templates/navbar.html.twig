@@ -1,0 +1,24 @@
+<nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed" id="light">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">{{ 'Toggle navigation'|t}}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar short-bar"></span>
+      </button>
+      {% if site_name %}
+        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
+      {% endif %}
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      {{ page.header.bootstrap_clean_blog_main_menu }}
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+

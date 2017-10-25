@@ -63,43 +63,8 @@
 #}
 
 
-<!---- Fixed Contact Box ---->
-
-<div class="contact-box">
-<div class="contact-box-label">
-    <a>Kontakt <i class="fa fa-envelope" aria-hidden="true"></i>
-</a>
-</div>
-<div class="contact-box-content">
-     <dd>{{ drupal_block('contactblock') }}</dd>
-</div>
-</div>
-
-<!--- End of Fixed Contact Box -->
-
-<nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed" id="light">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">{{ 'Toggle navigation'|t}}</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar short-bar"></span>
-      </button>
-      {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      {{ page.header.bootstrap_clean_blog_main_menu }}
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-</nav>
+{% include 'contact_block.html.twig' %}
+{% include 'navbar.html.twig' %}
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
@@ -118,13 +83,13 @@
     <div class="row">
        <div class="some-content">
        <div class="content-title" style="margin-bottom:-50px;">
-       <h3>Vi har en bred vifte af cases</h3>
-       <p>Bellcom's udviklingskompetencer og -ressourcer består i dag af et team, der hver især har den unikke specialisering, udannelse og erfaringsmæssige baggrund, som gør dem i stand til at udvikle den rigtige løsning til jer.</p>
+       <h3>{{ 'We have a wide range of cases'|t }}</h3>
+       <p>{{ 'Bellcom's development capabilities and resources today consist of a team that each has the unique specialization, training and experience background that enables them to develop the right solution for you.'|t }}</p>
        </div>
      <div class="cases">
      <div class="case-text-wrapper">
-     <h4>POMPdeLUX</h4>
-     <p>PompdeLUX er en meget kvalitetsbevidst og ambitiøs virksomhed og da de stod overfor at skulle vælge leverandør til ny e-handelsportal, blev valget truffet efter grundig undersøgelse af en række forskellige løsninger og leverandører. </p>
+     <h4>{{ 'POMPdeLUX'|t }}</h4>
+     <p>{{ 'PompdeLUX is a very quality conscious and ambitious company, and when faced with choosing a supplier for a new e-commerce portal, the choice was made after careful examination of a variety of solutions and suppliers.'|t }}</p>
      <a href="https://www.pompdelux.com/da_DK/">http://www.pompdelux.com</a></div>
      <div class="case-wrapper">
    <img class="case-image case-image__back image--back" src="{{ base_path ~ directory }}/images/pomp-baggrund.png">
@@ -136,7 +101,7 @@
      <div class="case-text-wrapper end">
      <div>
      <h4>KTC.dk</h4>
-     <p>KTC er en specialiseret microsite-løsning, baseret på Drupal Organic Groups. Det gør det muligt for alle medarbejdere at oprette og drive et digitalt netværk. </p>
+     <p>{{ 'KTC is a specialized microsite solution, based on Drupal Organic Groups. It allows all employees to create and operate a digital network.'|t }}</p>
      <a href="http://ktc.dk">http://www.ktc.dk</a></div></div>
      <div class="case-wrapper">
    <img class="case-image case-image__back image--back" src="{{ base_path ~ directory }}/images/ktc-baggrund.png">
@@ -146,8 +111,8 @@
        
          <div class="cases">
      <div class="case-text-wrapper">
-     <h4>Ballerup Kommune</h4>
-     <p>Ballerup Kommune er ikke nybegynder, når det kommer til afprøvning af nye teknologier og metoder. Valget af Drupal som kommunens open source CMS platform, blev allerede taget for tre år siden.</p>
+     <h4>{{ 'Ballerup Kommune'|t }}</h4>
+     <p>{{ 'Ballerup Municipality is not a beginner when it comes to testing new technologies and methods. The choice of Drupal as the municipality's open source CMS platform was already taken three years ago.'|t }}</p>
      <a href="http://ballerup.dk">http://www.ballerup.dk</a></div>
      <div class="case-wrapper">
    <img class="case-image case-image__back image--back" src="{{ base_path ~ directory }}/images/ballerup-baggrund.png">
@@ -157,7 +122,7 @@
        <br>
        <br>
        <div class="content-title mobile-case">
-           <h3>Vi er stolte af at have...</h3>
+           <h3>{{ 'We are proud to have...'|t }}</h3>
        </div>
         
         <img id="kunder" src="{{ base_path ~ directory }}/images/kunder.png">
@@ -184,69 +149,5 @@
   </div>
 </div>
 
-<!-- Footer -->
-<footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-sm-3">
-         {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
-       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
-        {# Social buttons block #}
-        {% block social_buttons %}
-        {% if social_links %}
-        <ul class="list-inline">
-          {% for network, url in social_links %}
-          <li>
-            <a target="_blank" href="{{ url }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {% endblock %}
-           </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Menu</h6>
-          <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Andet</h6>
-          <dd>{{ drupal_block('andet') }}</dd>
-          </div>
-             <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
-          {{ drupal_block('views_block__footer_blog_block_1') }}
-          </div>
- 
-    
-    </div>
-  </div>
-</footer>
+{% include 'footer.html.twig' %}
 
-<script>
-
-function initMap() {
-        var uluru = {lat: 55.4872883, lng: 9.4713059};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: uluru,
-            disableDefaultUI: true
-        });
-       
-        var marker = new google.maps.Marker({
-          position: uluru,
-            icon: 'http://svgshare.com/i/zF.svg',
-          map: map,
-            anchor: new google.maps.Point(0, 0)
-        });
-      }
-</script>
- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
-    </script>
