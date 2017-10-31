@@ -14,6 +14,9 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
   $site_slogan = isset($variables['site_slogan']) ? $variables['site_slogan'] : \Drupal::config('system.site')->get('slogan');
   $header_image = theme_get_setting('bootstrap_clean_blog_header_default');
 
+  $variables['site_languages'] = \Drupal::languageManager()->getLanguages();
+  $variables['base_url'] = $GLOBALS['base_url'];
+
   $variables['display_submitted'] = FALSE;
 
   if (isset($variables['node'])) {
@@ -35,7 +38,6 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
     $variables['display_submitted'] = $node_type->displaySubmitted();
   }
 
-  
   $variables['site_name'] = $site_name;
   $variables['site_slogan'] = $site_slogan;
   $variables['header_image'] = $header_image;

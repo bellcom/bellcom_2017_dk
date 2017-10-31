@@ -62,6 +62,7 @@
  */
 #}
 
+{% include 'lang_switcher.html.twig' %}
 {% include 'navbar.html.twig' %}
 
 <!-- Page Header -->
@@ -115,7 +116,7 @@
           </div>
            </div>
              <section id="customer-logos">
-  <a href="{% if (language.getId() == 'da') %}/kunder{% else %}/customers{% endif %}" class="container-lg">
+  <a href="{{ base_url }}/kunder" class="container-lg">
     <span class="common-Button common-Button--default">{{ 'See our customers'|t }}</span>
     <ul>
       <li><img class="kickstarter" alt="koebenhavns kommune" src="http://new-bellcom-aug.dd:8083/sites/new-bellcom-aug.dd/files/K%C3%B8behavns%20kommune.png">

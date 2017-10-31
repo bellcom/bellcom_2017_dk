@@ -20,9 +20,6 @@
     display: none;
 }
 
-.node--type-vaerk .post-meta {
-    display: none;
-}
 .path-taxonomy .page-header {
     height: 20vh;
 }
@@ -91,7 +88,7 @@
 .node--type-product .page-header {
     background: #53B0EB;
     color: #fff;
-    min-height: 70vh;
+    height: 40vh;
 }
 
 .main-vaerk-wrapper {
@@ -3324,3 +3321,49 @@ Pricing table
              
     }
     }
+
+
+/* Language switcher */
+.lang-switcher {
+    background: #1175c0;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    left: 0;
+    position: fixed;
+    top: 20%;
+    transition: 0.3s;
+    z-index: 99999;
+}
+
+.lang-switcher:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+ul.lang-switcher-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.lang-switcher-list li {
+    border-bottom: 1px solid #ffffff;
+}
+
+ul.lang-switcher-list li:last-child {
+    border-bottom: none;
+}
+
+.lang-switcher a {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.lang-switcher .active-lang a {
+    font-size: 16px;
+    font-weight: bold;
+}
+

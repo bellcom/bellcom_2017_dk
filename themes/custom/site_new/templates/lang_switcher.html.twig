@@ -1,0 +1,15 @@
+
+{% if site_languages|length > 1 %}
+<div class="lang-switcher">
+	<ul class="lang-switcher-list">
+	{% for key,value in site_languages %}
+		<li{% if (language.getId() == key) %} class="active-lang"{% endif %}>
+			<a href="{{ base_url }}/{{ key }}">
+				{% if (key == 'da') %}Dansk{% else %}{{ value.name }}{% endif %}
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
+{% endif %}
+
