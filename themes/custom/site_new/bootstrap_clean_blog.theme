@@ -41,17 +41,25 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
   $variables['site_name'] = $site_name;
   $variables['site_slogan'] = $site_slogan;
   $variables['header_image'] = $header_image;
-  $variables['social_links'] = array_filter([
-    'facebook' => theme_get_setting('bootstrap_clean_blog_social_facebook'),
-    'twitter' => theme_get_setting('bootstrap_clean_blog_social_twitter'),
-    'github' => theme_get_setting('bootstrap_clean_blog_social_github'),
-    'drupal' => theme_get_setting('bootstrap_clean_blog_social_drupal'),
-    'instagram' => theme_get_setting('bootstrap_clean_blog_social_instagram'),
-    'reddit' => theme_get_setting('bootstrap_clean_blog_social_reddit'),
-    'flickr' => theme_get_setting('bootstrap_clean_blog_social_flickr'),
-    'linkedin' => theme_get_setting('bootstrap_clean_blog_social_linkedin'),
-  ]);
-  
+
+  if (\Drupal::languageManager()->getCurrentLanguage()->getId() == 'en') {
+    $variables['social_links'] = array_filter([
+      'facebook' => 'https://www.facebook.com/bellcomestonia/',
+      'github' => theme_get_setting('bootstrap_clean_blog_social_github'),
+      'linkedin' => 'https://www.linkedin.com/company/2872561',
+    ]);
+  } else {
+    $variables['social_links'] = array_filter([
+      'facebook' => theme_get_setting('bootstrap_clean_blog_social_facebook'),
+      'twitter' => theme_get_setting('bootstrap_clean_blog_social_twitter'),
+      'github' => theme_get_setting('bootstrap_clean_blog_social_github'),
+      'drupal' => theme_get_setting('bootstrap_clean_blog_social_drupal'),
+      'instagram' => theme_get_setting('bootstrap_clean_blog_social_instagram'),
+      'reddit' => theme_get_setting('bootstrap_clean_blog_social_reddit'),
+      'flickr' => theme_get_setting('bootstrap_clean_blog_social_flickr'),
+      'linkedin' => theme_get_setting('bootstrap_clean_blog_social_linkedin'),
+    ]);
+  }
 }
 
 /**

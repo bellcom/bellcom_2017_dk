@@ -4,26 +4,31 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-sm-3">
-         {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
-       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">{{ 'Tel.'|t }}: 70 26 00 85</a> <br><br> {{ 'Mon-Fri'|t }}: 09:00 - 17:00</bt></p>
+        {% if site_name %}
+          <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
+        {% endif %}
+        {% if (language.getId() == 'en') %}
+          <a class="mail-link" href="mailto:info@bellcom.ee">info@bellcom.ee</a>
+          <p class="footer-location-text">Peterburi tee 46-305 <br> Tallinn, Estonia<br><br> {{ 'Mon-Fri'|t }}: 09:00 - 17:00</bt></p>
+        {% else %}
+          <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
+          <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">{{ 'Tel.'|t }}: 70 26 00 85</a> <br><br> {{ 'Mon-Fri'|t }}: 09:00 - 17:00</bt></p>
+        {% endif %}
         {# Social buttons block #}
         {% block social_buttons %}
         {% if social_links %}
-        <ul class="list-inline">
-          {% for network, url in social_links %}
-          <li>
-            <a target="_blank" href="{{ url }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
+           <ul class="list-inline">
+           {% for network, url in social_links %}
+             <li>
+               <a target="_blank" href="{{ url }}">
+                 <span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
+                 </span>
+               </a>
+             </li>
+           {% endfor %}
+           </ul>
         {% endif %}
         {% endblock %}
            </div>
@@ -55,20 +60,34 @@ for(var i = 0; i < hashParams.length; i++){
 <script>
 
 function initMap() {
-        var uluru = {lat: 55.4872883, lng: 9.471305900000061};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: uluru,
-            disableDefaultUI: true
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-            icon: 'http://svgshare.com/i/zF.svg',
-          map: map
-        });
-      }
+    var lang = '{{ language.getId() }}';
+    var COORDS = {};
+
+    switch (lang) {
+        case 'en':
+            COORDS.lat = 59.426188;
+            COORDS.lng = 24.8168238;
+            break;
+
+        default:
+            COORDS.lat = 55.4872883;
+            COORDS.lng = 9.471305900000061;
+            break;
+    }
+
+    var uluru = {lat: COORDS.lat, lng: COORDS.lng};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: uluru,
+        disableDefaultUI: true
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        icon: 'http://svgshare.com/i/zF.svg',
+        map: map
+    });
+}
 </script>
- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
-    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap"></script>
 
