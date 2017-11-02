@@ -1272,13 +1272,20 @@
         height: 650px!important;
     }
     .tabel-hosting .row-four {
-            flex-direction: column;
+        flex-direction: column;
     }
     .tabel-hosting .competence-link {
+        color: #000000;
         min-width: 100%;
+    }
+    .tabel-hosting .competence-link:hover {
+        color: #ffffff;
     }
     .tabel-hosting .competence {
         padding: 30px;
+    }
+    .tabel-hosting .competence:hover a {
+        color: #ffffff;
     }
     
     /* Pricing table */
@@ -3316,11 +3323,22 @@ Pricing table
         #udvikling {
             height: 450px;
         }
-         .container, .container-lg {
-         max-width: 1240px!important;
-             
+        .container, .container-lg {
+            max-width: 1240px!important;
+        }
     }
-    }
+
+.product-block .tabel a.competence-link {
+    color:#000000;
+}
+
+.product-block .tabel a.competence-link:hover {
+    color:#ffffff;
+}
+
+.product-block .tabel .competence:hover a {
+    color:#ffffff;
+}
 
 
 /* Language switcher */
