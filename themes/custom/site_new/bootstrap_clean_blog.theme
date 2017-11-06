@@ -46,7 +46,7 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
     $variables['social_links'] = array_filter([
       'facebook' => 'https://www.facebook.com/bellcomestonia/',
       'github' => theme_get_setting('bootstrap_clean_blog_social_github'),
-      'linkedin' => 'https://www.linkedin.com/company/2872561',
+      'linkedin' => 'https://www.linkedin.com/company/bellcomestonia/',
     ]);
   } else {
     $variables['social_links'] = array_filter([
