@@ -81,9 +81,10 @@ function initMap() {
         center: uluru,
         disableDefaultUI: true
     });
+
     var marker = new google.maps.Marker({
         position: uluru,
-        icon: 'http://svgshare.com/i/zF.svg',
+        icon: '{{ base_path ~ directory }}/images/bellcomgmap.svg',
         map: map
     });
 }
