@@ -3,7 +3,30 @@
  * @file
  * Process and preprocess for theme.
  */
- 
+
+
+/**
+ * Implements hook_blog_preprocess_html().
+ */
+function bootstrap_clean_blog_preprocess_html(&$variables) {
+
+  $site_config = \Drupal::config('system.site');
+
+  if (!empty($variables['page']['#title'])) {
+    $head_title = array(
+      'title' => trim(strip_tags($variables['page']['#title'])),
+      'name' => $site_config->get('name'),
+    );
+  } else {
+    $head_title = array('name' => $site_config->get('name'));
+    if ($site_config->get('slogan')) {
+      $head_title['slogan'] = strip_tags($site_config->get('slogan'));
+    }
+  }
+
+  $variables['page_head_title'] = implode(' | ', $head_title);
+}
+
 
 /**
  * Implements hook_blog_preprocess_page().
@@ -61,6 +84,7 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
     ]);
   }
 }
+
 
 /**
  * Implements hook_blog_preprocess_node().
