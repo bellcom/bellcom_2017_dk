@@ -53,7 +53,9 @@
 var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
 for(var i = 0; i < hashParams.length; i++){
     var p = hashParams[i].split('=');
-    document.getElementById(p[0]).value = decodeURIComponent(p[1]);
+    if (document.getElementById(p[0])) {
+        document.getElementById(p[0]).value = decodeURIComponent(p[1]);
+    }
 }
 
 </script>
@@ -88,7 +90,11 @@ function initMap() {
         map: map
     });
 }
+
+
+if (document.getElementById('map')) {
+    document.write('\<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap"\>\</script\>');
+}
+
 </script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap"></script>
 
