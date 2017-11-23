@@ -1233,7 +1233,7 @@
     .cases p {
         text-align: left!important;
         font-size: 16px;
-        min-width: 200px;
+        width: 400px;
     }
     .cases a {
         font-size: 16px;
@@ -3000,6 +3000,9 @@ Pricing table
         .page-header .container {
             padding-top: 100px;
         }
+        .mobile-case {
+            margin-top: 100px;
+        }
         .some-content {
             overflow: hidden;
         }
@@ -3008,6 +3011,12 @@ Pricing table
         }
         .case-wrapper {
             margin-top: 400px;
+        }
+        .cases {
+            margin-top: -150px;
+        }
+        .cases p {
+            width: 260px;
         }
         .case-image__back {
             width: 450px;
@@ -3246,9 +3255,6 @@ Pricing table
         .con-img-right {
             display: none;
         }
-        .some-content {
-          padding: 0;
-        }
     }
 
     @media only screen and (max-width: 1299px) {
@@ -3318,8 +3324,3 @@ Pricing table
              
     }
     }
-.display-flex{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
