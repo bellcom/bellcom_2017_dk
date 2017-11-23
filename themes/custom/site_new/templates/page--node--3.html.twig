@@ -66,13 +66,13 @@
 <!---- Fixed Contact Box ---->
 
 <div class="contact-box">
-<div class="contact-box-label">
+  <div class="contact-box-label">
     <a>Kontakt <i class="fa fa-envelope" aria-hidden="true"></i>
-</a>
-</div>
-<div class="contact-box-content">
-     <dd>{{ drupal_block('contactblock') }}</dd>
-</div>
+    </a>
+  </div>
+  <div class="contact-box-content">
+    <dd>{{ drupal_block('contactblock') }}</dd>
+  </div>
 </div>
 
 <!--- End of Fixed Contact Box -->
@@ -104,81 +104,82 @@
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header node-header">
-  
-<div class="container padding">
-{{ drupal_block('casesdescription') }}
-    </div>
- 
+
+  <div class="container padding">
+    {{ drupal_block('casesdescription') }}
+  </div>
+
 </header>
 
 <!-- Post Content -->
-  <div class="bg-white">
+<div class="bg-white">
 
   <div class="container padding">
     <div class="row">
-       <div class="some-content">
-       <div class="content-title" style="margin-bottom:-50px;">
-       <h3>Vi har en bred vifte af cases</h3>
-       <p>Bellcom's udviklingskompetencer og -ressourcer består i dag af et team, der hver især har den unikke specialisering, udannelse og erfaringsmæssige baggrund, som gør dem i stand til at udvikle den rigtige løsning til jer.</p>
-       </div>
-     <div class="cases">
-     <div class="case-text-wrapper">
-     <h4>POMPdeLUX</h4>
-     <p>PompdeLUX er en meget kvalitetsbevidst og ambitiøs virksomhed og da de stod overfor at skulle vælge leverandør til ny e-handelsportal, blev valget truffet efter grundig undersøgelse af en række forskellige løsninger og leverandører. </p>
-     <a href="https://www.pompdelux.com/da_DK/">http://www.pompdelux.com</a></div>
-     <div class="case-wrapper">
-   <img class="case-image case-image__back image--back" src="{{ base_path ~ directory }}/images/pomp-baggrund.png">
-    <img class="case-img case-image__front image--front" src="{{ base_path ~ directory }}/images/pomp-mobil.png">
-</div>
-       </div>
-       
-        <div class="cases reverse">
-     <div class="case-text-wrapper end">
-     <div>
-     <h4>KTC.dk</h4>
-     <p>KTC er en specialiseret microsite-løsning, baseret på Drupal Organic Groups. Det gør det muligt for alle medarbejdere at oprette og drive et digitalt netværk. </p>
-     <a href="http://ktc.dk">http://www.ktc.dk</a></div></div>
-     <div class="case-wrapper">
-   <img class="case-image case-image__back image--back" src="{{ base_path ~ directory }}/images/ktc-baggrund.png">
-    <img class="case-img case-image__front image--front" src="{{ base_path ~ directory }}/images/ktc-front.png">
-</div>
-       </div>
-       
-         <div class="cases">
-     <div class="case-text-wrapper">
-     <h4>Ballerup Kommune</h4>
-     <p>Ballerup Kommune er ikke nybegynder, når det kommer til afprøvning af nye teknologier og metoder. Valget af Drupal som kommunens open source CMS platform, blev allerede taget for tre år siden.</p>
-     <a href="http://ballerup.dk">http://www.ballerup.dk</a></div>
-     <div class="case-wrapper">
-   <img class="case-image case-image__back image--back" src="{{ base_path ~ directory }}/images/ballerup-baggrund.png">
-    <img class="case-img case-image__front image--front" src="{{ base_path ~ directory }}/images/ballerup-front.png">
-</div>
-       </div>
-       <br>
-       <br>
-       <div class="content-title mobile-case">
-           <h3>Vi er stolte af at have...</h3>
-       </div>
-        
-        <img id="kunder" src="{{ base_path ~ directory }}/images/kunder.png">
-        
+      <div class="some-content">
+        <div class="content-title">
+          <h3>Vi har en bred vifte af cases</h3>
+          <p>Bellcom's udviklingskompetencer og -ressourcer består i dag af et team, der hver især har den unikke specialisering, udannelse og erfaringsmæssige baggrund, som gør dem i stand til at udvikle den rigtige løsning til jer.</p>
         </div>
-        
-         <div class="con-img-right" id="gmap-container">
-          <div class="col-8 col-sm-6">
-          <dd>{{ drupal_block('gmap') }}</dd>
+        <div class="row cases display-flex">
+          <div class="col-sx-12 col-lg-6">
+            <div class="text-wrapper">
+              <h4>POMPdeLUX</h4>
+              <p>PompdeLUX er en meget kvalitetsbevidst og ambitiøs virksomhed og da de stod overfor at skulle vælge leverandør til ny e-handelsportal, blev valget truffet efter grundig undersøgelse af en række forskellige løsninger og leverandører. </p>
+              <a href="https://www.pompdelux.com/da_DK/">http://www.pompdelux.com</a>
+            </div>
           </div>
-          
-          <div class="col-4 col-sm-6" id="googlemaps">
-           <div id="map"></div> 
+          <div class="col-sx-12 col-lg-6">
+            <img class="img-responsive" src="{{ base_path ~ directory }}/images/pomp_img.png">
           </div>
+        </div>
+        <div class="row cases display-flex">
           
+          <div class="col-sx-12 col-lg-6">
+            <div class="text-wrapper">
+              <h4>fgbvnvnbvbnvbnvKTC.dk</h4>
+              <p>KTC er en specialiseret microsite-løsning, baseret på Drupal Organic Groups. Det gør det muligt for alle medarbejdere at oprette og drive et digitalt netværk. </p>
+              <a href="http://ktc.dk">http://www.ktc.dk</a>
+            </div>
+          </div>
+          <div class="col-sx-12 col-lg-6">
+            <img class="img-responsive" src="{{ base_path ~ directory }}/images/ktc_img.png">
+          </div>
+        </div>
+        <div class="row cases display-flex">
+          <div class="col-sx-12 col-lg-6">
+            <div class="text-wrapper">
+              <h4>Ballerup Kommune</h4>
+              <p>Ballerup Kommune er ikke nybegynder, når det kommer til afprøvning af nye teknologier og metoder. Valget af Drupal som kommunens open source CMS platform, blev allerede taget for tre år siden.</p>
+              <a href="http://ballerup.dk">http://www.ballerup.dk</a>
+            </div>
+          </div>
+          <div class="col-sx-12 col-lg-6">
+            <img class="img-responsive" src="{{ base_path ~ directory }}/images/ballerup_img.png">
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="content-title mobile-case">
+          <h3>Vi er stolte af at have...</h3>
+        </div>
+        <img id="kunder" src="{{ base_path ~ directory }}/images/kunder.png">
       </div>
-   
-      
-        
+      <div class="con-img-right" id="gmap-container">
+        <div class="col-8 col-sm-6">
+          <dd>{{ drupal_block('gmap') }}</dd>
+        </div>
+
+        <div class="col-4 col-sm-6" id="googlemaps">
+          <div id="map"></div> 
+        </div>
+
+      </div>
+
+
+
       <div class="cta-block">
-            <dd>{{ drupal_block('cta') }}</dd>
+        <dd>{{ drupal_block('cta') }}</dd>
       </div>
     </div>
   </div>
@@ -189,64 +190,64 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-sm-3">
-         {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
-       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
-        {# Social buttons block #}
-        {% block social_buttons %}
-        {% if social_links %}
-        <ul class="list-inline">
-          {% for network, url in social_links %}
-          <li>
-            <a target="_blank" href="{{ url }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
+        {% if site_name %}
+          <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
         {% endif %}
+        <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
+        <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
+          {# Social buttons block #}
+          {% block social_buttons %}
+            {% if social_links %}
+            <ul class="list-inline">
+              {% for network, url in social_links %}
+                <li>
+                  <a target="_blank" href="{{ url }}">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         {% endblock %}
-           </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Menu</h6>
-          <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Andet</h6>
-          <dd>{{ drupal_block('andet') }}</dd>
-          </div>
-             <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
-          {{ drupal_block('views_block__footer_blog_block_1') }}
-          </div>
- 
-    
+      </div>
+      <div class="col-6 col-sm-3 na-mobile">
+        <h6>Menu</h6>
+        <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
+      </div>
+      <div class="col-6 col-sm-3 na-mobile">
+        <h6>Andet</h6>
+        <dd>{{ drupal_block('andet') }}</dd>
+      </div>
+      <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
+        {{ drupal_block('views_block__footer_blog_block_1') }}
+      </div>
+
+
     </div>
   </div>
 </footer>
 
 <script>
 
-function initMap() {
-        var uluru = {lat: 55.4872883, lng: 9.4713059};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: uluru,
-            disableDefaultUI: true
-        });
-       
-        var marker = new google.maps.Marker({
-          position: uluru,
-            icon: 'http://svgshare.com/i/zF.svg',
-          map: map,
-            anchor: new google.maps.Point(0, 0)
-        });
-      }
+  function initMap() {
+    var uluru = {lat: 55.4872883, lng: 9.4713059};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: uluru,
+      disableDefaultUI: true
+    });
+
+    var marker = new google.maps.Marker({
+      position: uluru,
+      icon: 'http://svgshare.com/i/zF.svg',
+      map: map,
+      anchor: new google.maps.Point(0, 0)
+    });
+  }
 </script>
- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
-    </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
+</script>
