@@ -3,7 +3,8 @@
 
 # Ignore non-custom parts of Drupal.
 core/
-modules/contrib
+modules
+!modules/custom
 profiles/contrib
 themes/contrib
 sites/default/files
