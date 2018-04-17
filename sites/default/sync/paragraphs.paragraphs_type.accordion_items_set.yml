@@ -1,0 +1,9 @@
+uuid: c68199ab-16bb-435d-8859-121748270a54
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_items_set
+label: 'Accordion items set'
+icon_uuid: null
+description: 'Set of Accordion item paragraphs'
+behavior_plugins: {  }

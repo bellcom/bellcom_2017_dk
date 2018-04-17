@@ -1,0 +1,19 @@
+uuid: f4ab8122-5863-444d-97aa-035480267fb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_title
+    - paragraphs.paragraphs_type.accordion_items_set
+id: paragraph.accordion_items_set.field_accordion_title
+field_name: field_accordion_title
+entity_type: paragraph
+bundle: accordion_items_set
+label: 'Accordion items set title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
