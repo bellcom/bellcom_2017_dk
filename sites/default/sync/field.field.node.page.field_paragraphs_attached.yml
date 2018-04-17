@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs_attached
     - node.type.page
     - paragraphs.paragraphs_type.accordion_item
+    - paragraphs.paragraphs_type.accordion_items_set
   module:
     - entity_reference_revisions
 id: node.page.field_paragraphs_attached
@@ -24,8 +25,12 @@ settings:
     negate: 0
     target_bundles:
       accordion_item: accordion_item
+      accordion_items_set: accordion_items_set
     target_bundles_drag_drop:
       accordion_item:
         enabled: true
         weight: 2
+      accordion_items_set:
+        enabled: true
+        weight: 3
 field_type: entity_reference_revisions
