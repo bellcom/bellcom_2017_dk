@@ -3326,11 +3326,13 @@ Pricing table
     }
 
 /* Accordion paragraphs*/
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default,
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default{
   margin: 15px 0px 15px 0px;
   padding: 30px 50px 30px 50px;
   background-color: white;
 }
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .accordion-title-element,
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .accordion-title-element{
   width: 70px;
   height: 60px;
@@ -3339,6 +3341,7 @@ Pricing table
   display: block;
   position: relative;
 }
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .accordion-title-element:before,
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .accordion-title-element:before{
     content: '';
     width: 40px;
@@ -3359,6 +3362,7 @@ Pricing table
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .accordion-title-element:after,
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .accordion-title-element:after{
     content: '';
     width: 40px;
@@ -3379,7 +3383,8 @@ Pricing table
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
-.paragraph.paragraph--type--accordion-item.paragraph--view-mode--default div[aria-expanded="true"] .accordion-title-element:before{
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default div[aria-expanded="true"] > .accordion-title-element:before,
+.paragraph.paragraph--type--accordion-item.paragraph--view-mode--default div[aria-expanded="true"] > .accordion-title-element:before{
     content: '';
     width: 40px;
     position: absolute;
@@ -3394,7 +3399,8 @@ Pricing table
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
-.paragraph.paragraph--type--accordion-item.paragraph--view-mode--default div[aria-expanded="true"] .accordion-title-element:after{
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default div[aria-expanded="true"] > .accordion-title-element:after,
+.paragraph.paragraph--type--accordion-item.paragraph--view-mode--default div[aria-expanded="true"] > .accordion-title-element:after{
     content: '';
     width: 40px;
     position: absolute;
@@ -3409,16 +3415,29 @@ Pricing table
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
 }
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .accordion-title,
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .accordion-title{
   display: flex;
   align-items: center;
   cursor: pointer;
 }
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .field.field--name-field-accordion-title,
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .field.field--name-field-accordion-title{
   color: #5d5d5d;
   font-size: 30px;
 }
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .field.field--name-field-accordion-body p,
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .field.field--name-field-accordion-body p{
   text-align: left !important;
   margin-left: 105px;
+}
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default{
+  margin: 40px 0px 40px 90px;
+  padding: 20px;
+  background-color: white;
+  border: 2px #bab9ba solid;
+}
+.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default 
+.paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .accordion-title-element{
+  margin-right: 35px;
 }
