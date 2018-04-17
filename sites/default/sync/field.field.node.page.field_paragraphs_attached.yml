@@ -1,0 +1,31 @@
+uuid: dc54172e-d862-4f4f-b069-3dd0ec1dc71a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs_attached
+    - node.type.page
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs_attached
+field_name: field_paragraphs_attached
+entity_type: node
+bundle: page
+label: 'Paragraphs attached'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion_item: accordion_item
+    target_bundles_drag_drop:
+      accordion_item:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
