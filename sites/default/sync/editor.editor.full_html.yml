@@ -17,6 +17,7 @@ settings:
           items:
             - Bold
             - Italic
+            - Format
         -
           name: Links
           items:
@@ -36,6 +37,11 @@ settings:
           name: Tools
           items:
             - Source
+        -
+          name: Styling
+          items:
+            - Styles
+            - Table
   plugins:
     language:
       language_list: un

@@ -20,5 +20,5 @@ recipients:
   - ls@bellcom.dk
 reply: ''
 weight: 0
-message: 'Thanks for contacting us. We''ll get back to you as soon as we can!'
+message: 'Tak for din besked! Vi vender tilbage til dig hurtigst muligt. '
 redirect: /
