@@ -38,23 +38,23 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
+{% set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  ]
-%}
+] %}
 
 {% block paragraph %}
-  <div  {{ attributes.addClass(classes) }}>
-    {% block content %}
-      <div class="accordion-title" data-toggle="collapse" data-target="#collapse{{ paragraph.id() }}">
-      <span class="accordion-title-element"></span>{{ content.field_accordion_title }}
-      </div>
-      <div id="collapse{{ paragraph.id() }}" class="collapse">
-      {{ content.field_accordion_body }}
-      </div>
-    {% endblock %}
-  </div>
+    <div {{ attributes.addClass(classes) }}>
+        {% block content %}
+            <div class="accordion-title" data-toggle="collapse" data-target="#collapse{{ paragraph.id() }}">
+                <span class="accordion-title-element"></span>{{ content.field_accordion_title }}
+            </div>
+            <div id="collapse{{ paragraph.id() }}" class="collapse">
+                <div class="accordion-body">
+                    {{ content.field_accordion_body }}
+                </div>
+            </div>
+        {% endblock %}
+    </div>
 {% endblock paragraph %}

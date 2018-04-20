@@ -51,12 +51,11 @@
                 <span class="accordion-title-element"></span>{{ content.field_accordion_title }}
             </div>
             <div id="collapse{{ paragraph.id() }}" class="collapse">
-
                 <div class="accordion-body">
                     {{ content.field_accordion_body }}
-                </div>
 
-                {{ content.field_accordion_items_attached }}
+                    {{ content.field_accordion_items_attached }}
+                </div>
             </div>
         {% endblock %}
     </div>
