@@ -4047,6 +4047,10 @@ nav li {
 
 @media print {
 
+    .cta-block {
+        display: none;
+    }
+
     .page-header {
         height: auto;
     }
