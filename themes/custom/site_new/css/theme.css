@@ -677,11 +677,6 @@
         padding: 0;
     }
 
-    ol,
-    ul {
-        list-style: none;
-    }
-
     #customer-logos .common-Button {
         position: absolute;
         z-index: 1;
@@ -3940,12 +3935,6 @@ nav li {
     font-size: 30px;
 }
 
-.paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .field.field--name-field-accordion-body p,
-.paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .field.field--name-field-accordion-body p {
-    text-align: left !important;
-    margin-left: 105px;
-}
-
 .paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default {
     margin: 40px 0px 40px 90px;
     padding: 20px;
@@ -3962,9 +3951,6 @@ nav li {
 /**
  Morten @mn
  */
-.node--type-page .bg-white > .container {
-    /*background-color: #fff;*/
-}
 
 .boxy {
     background: #fff;
@@ -3973,3 +3959,27 @@ nav li {
     -moz-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
 }
+
+/* Body */
+.paragraph.paragraph--type--accordion-item-set .field--name-field-accordion-body h3,
+.paragraph.paragraph--type--accordion-item-set .field--name-field-accordion-body p,
+.paragraph.paragraph--type--accordion-item-set .field--name-field-accordion-body,
+.paragraph.paragraph--type--accordion-item .field--name-field-accordion-body h3,
+.paragraph.paragraph--type--accordion-item .field--name-field-accordion-body p,
+.paragraph.paragraph--type--accordion-item .field--name-field-accordion-body {
+    text-align: left !important;
+}
+
+.paragraph.paragraph--type--accordion-item-set .field--name-field-accordion-body,
+.paragraph.paragraph--type--accordion-item .field--name-field-accordion-body {
+    font-size: 16px;
+    color: #8c8c8c;
+}
+
+
+
+
+
+
+.paragraph.paragraph--type--accordion-item-set {}
+.paragraph.paragraph--type--accordion-item {}
