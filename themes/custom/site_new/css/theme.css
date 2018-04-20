@@ -4044,3 +4044,14 @@ nav li {
 .paragraph.paragraph--type--accordion-items-set .paragraph.paragraph--type--accordion-item .accordion-title:after {
     top: 6px;
 }
+
+@media print {
+
+    .page-header {
+        height: auto;
+    }
+
+    footer {
+        display: none;
+    }
+}
