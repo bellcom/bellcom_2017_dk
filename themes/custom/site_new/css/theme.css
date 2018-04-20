@@ -1221,6 +1221,7 @@ a:hover {
     margin-top: 80px;
 }
 
+#block-cta-gdpr,
 #block-cta {
     width: 100%;
     height: 100;
@@ -1232,12 +1233,14 @@ a:hover {
     align-items: center;
 }
 
+#block-cta-gdpr h3,
 #block-cta h3 {
     color: #fff;
     font-size: 35px;
     font-weight: 100;
 }
 
+#block-cta-gdpr .field--type-link,
 #block-cta .field--type-link {
     text-decoration: none;
     border: 1px solid #fff;
@@ -1252,6 +1255,7 @@ a:hover {
     cursor: pointer;
 }
 
+#block-cta-gdpr .field--type-link:hover,
 #block-cta .field--type-link:hover {
     background: #fff;
     color: #000;
@@ -3952,4 +3956,20 @@ nav li {
 .paragraph.paragraph--type--accordion-items-set.paragraph--view-mode--default
 .paragraph.paragraph--type--accordion-item.paragraph--view-mode--default .accordion-title-element {
     margin-right: 35px;
+}
+
+
+/**
+ Morten @mn
+ */
+.node--type-page .bg-white > .container {
+    /*background-color: #fff;*/
+}
+
+.boxy {
+    background: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
 }
