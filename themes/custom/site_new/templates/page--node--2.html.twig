@@ -66,30 +66,32 @@
 <!---- Fixed Contact Box ---->
 
 <div class="contact-box">
-<div class="contact-box-label">
+  <div class="contact-box-label">
     <a>Kontakt <i class="fa fa-envelope" aria-hidden="true"></i>
-</a>
-</div>
-<div class="contact-box-content">
-     <dd>{{ drupal_block('contactblock') }}</dd>
-</div>
+    </a>
+  </div>
+  <div class="contact-box-content">
+    <dd>{{ drupal_block('contactblock') }}</dd>
+  </div>
 </div>
 
 <!--- End of Fixed Contact Box -->
 
-<nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed" id="light">
+<nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed"
+     id="light">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse"
               data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">{{ 'Toggle navigation'|t}}</span>
+        <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar short-bar"></span>
       </button>
       {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
+        <a class="navbar-brand" href="{{ front_page }}"
+           title="{{ 'Home'|t }}">{{ site_name }}</a>
       {% endif %}
     </div>
 
@@ -105,72 +107,73 @@
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header node-header">
   <div class="container padding">
-{{ drupal_block('omosdescription') }}
-    </div>
+    {{ drupal_block('omosdescription') }}
+  </div>
 
 </header>
 
 <!-- Post Content -->
-  <div class="bg-white">
+<div class="bg-white">
 
   <div class="container padding">
     <div class="row">
-      
+
       <div class="con-img-right">
-          <div class="col-8 col-sm-6">
+        <div class="col-8 col-sm-6">
           <dd>{{ drupal_block('aboutus') }}</dd>
-          </div>
-          
-          <div class="col-4 col-sm-6">
-          <div class="bc-video">
-          <a href="https://www.youtube.com/watch?v=dFsMnzp6t1Y" id="youtube" data-modal="button"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> 
-          </div></div>
-          
-      </div>
-       
-       <!-- Customer Logos -->
-      <div class="title-customer">
-          <h3>Vi har kunder i hele landet.</h3>
-          <p>Er du vores næste kunde? Vi gør en stor dyd ud af at pleje vores kunder bedst muligt.</p>
-      </div>
-      <div class="customer-logos no-top-margin">
-           {{ page.customer }}
-      </div>
-      
-      <div class="con-team">
-         <div class="con-team-title">
-          <h3>Vi er Bellcom. Vi er et team.</h3>
-          <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling, design og <em>open source</em> webudvikling.</p></div>
-     <div class="employees">
-             <!--- Employees row -->
-              <div class="employees-row">
-                <!--- Employee img -->
-                    {{ drupal_view('employee') }}
-                  <!--- Employee img end-->
-              </div>
-              <!-- Employee row end -->
-              
-          </div>
-    
-        
-          <p style="text-align:left;margin-top:25px;">Estland:</p>
-          
-             <div class="employees">
-             <!--- Employees row -->
-              <div class="employees-row">
-                <!--- Employee img -->
-                    {{ drupal_view('employee_estland') }}
-                  <!--- Employee img end-->
-              </div>
-              <!-- Employee row end -->
-              
-          </div>
-          
+        </div>
+
+        <div class="col-4 col-sm-6">
+          <div id="hosting"><img src="{{ base_path ~ directory }}/images/hosting.svg"></div>
+        </div>
 
       </div>
-        
+
+      <!-- Customer Logos -->
+      <div class="title-customer">
+        <h3>Vi har kunder i hele landet.</h3>
+        <p>Er du vores næste kunde? Vi gør en stor dyd ud af at pleje vores
+          kunder bedst muligt.</p>
+      </div>
+      <div class="customer-logos no-top-margin">
+        {{ page.customer }}
+      </div>
+
+      <div class="con-team">
+        <div class="con-team-title">
+          <h3>Vi er Bellcom. Vi er et team.</h3>
+          <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling,
+            design og <em>open source</em> webudvikling.</p></div>
+        <div class="employees">
+          <!--- Employees row -->
+          <div class="employees-row">
+            <!--- Employee img -->
+            {{ drupal_view('employee') }}
+            <!--- Employee img end-->
+          </div>
+          <!-- Employee row end -->
+
+        </div>
+
+
+        <p style="text-align:left;margin-top:25px;">Estland:</p>
+
+        <div class="employees">
+          <!--- Employees row -->
+          <div class="employees-row">
+            <!--- Employee img -->
+            {{ drupal_view('employee_estland') }}
+            <!--- Employee img end-->
+          </div>
+          <!-- Employee row end -->
+
+        </div>
+
+
+      </div>
+
       <div class="cta-block">
-            <dd>{{ drupal_block('cta') }}</dd>
+        <dd>{{ drupal_block('cta') }}</dd>
       </div>
     </div>
   </div>
@@ -181,42 +184,46 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-sm-3">
-         {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
-       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
+        {% if site_name %}
+          <a class="navbar-brand" href="{{ front_page }}"
+             title="{{ 'Home'|t }}">{{ site_name }}</a>
+        {% endif %}
+        <a class="mail-link"
+           href="mailto:support@bellcom.dk">support@bellcom.dk</a>
+        <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br>
+          <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a>
+          <br><br> Man-Fre: 09:00 - 17:00</bt></p>
         {# Social buttons block #}
         {% block social_buttons %}
-        {% if social_links %}
-        <ul class="list-inline">
-          {% for network, url in social_links %}
-          <li>
-            <a target="_blank" href="{{ url }}">
+          {% if social_links %}
+            <ul class="list-inline">
+              {% for network, url in social_links %}
+                <li>
+                  <a target="_blank" href="{{ url }}">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
               </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         {% endblock %}
-           </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Menu</h6>
-          <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Andet</h6>
-          <dd>{{ drupal_block('andet') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
-          {{ drupal_block('views_block__footer_blog_block_1') }}
-          </div>
- 
-    
+      </div>
+      <div class="col-6 col-sm-3 na-mobile">
+        <h6>Menu</h6>
+        <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
+      </div>
+      <div class="col-6 col-sm-3 na-mobile">
+        <h6>Andet</h6>
+        <dd>{{ drupal_block('andet') }}</dd>
+      </div>
+      <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
+        {{ drupal_block('views_block__footer_blog_block_1') }}
+      </div>
+
+
     </div>
   </div>
 </footer>
