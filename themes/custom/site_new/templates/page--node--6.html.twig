@@ -66,30 +66,32 @@
 <!---- Fixed Contact Box ---->
 
 <div class="contact-box">
-<div class="contact-box-label">
+  <div class="contact-box-label">
     <a>Kontakt <i class="fa fa-envelope" aria-hidden="true"></i>
-</a>
-</div>
-<div class="contact-box-content">
-     <dd>{{ drupal_block('contactblock') }}</dd>
-</div>
+    </a>
+  </div>
+  <div class="contact-box-content">
+    <dd>{{ drupal_block('contactblock') }}</dd>
+  </div>
 </div>
 
 <!--- End of Fixed Contact Box -->
 
-<nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed" id="light">
+<nav class="navbar navbar-solid navbar-custom navbar-fixed-top fixed"
+     id="light">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse"
               data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">{{ 'Toggle navigation'|t}}</span>
+        <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar short-bar"></span>
       </button>
       {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
+        <a class="navbar-brand" href="{{ front_page }}"
+           title="{{ 'Home'|t }}">{{ site_name }}</a>
       {% endif %}
     </div>
 
@@ -105,66 +107,65 @@
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header node-header">
   <div class="container padding">
-{{ drupal_block('hostingdescription') }}
-    </div>
+    {{ drupal_block('hostingdescription') }}
+  </div>
 
 </header>
 
 <!-- Post Content -->
-  <div class="bg-white">
+<div class="bg-white">
 
   <div class="container padding">
     <div class="row">
 
-  <div class="con-img-right" id="top-container">
-          <div class="col-8 col-sm-6">
+      <div class="con-img-right" id="top-container">
+        <div class="col-8 col-sm-6">
           <dd>{{ drupal_block('hostingtekst') }}</dd>
-          </div>
-          
-          <div class="col-4 col-sm-6">
-           <div id="hosting"><img src="{{ base_path ~ directory }}/images/hosting.svg"></div>
-           
-          </div>
-          
+        </div>
+
+        <div class="col-4 col-sm-6">
+          <div id="hosting"><img src="{{ base_path ~ directory }}/images/hosting.svg"></div>
+        </div>
       </div>
-      
-       <div class="con-img-right last-child" id="top-container" style="display:flex;flex-direction:row-reverse;align-items:center;">
-          <div class="col-8 col-sm-6">
-             <dd>{{ drupal_block('hostingtekst') }}</dd>
-          <p class="quoty">"Hos Bellcom hjælper vi dig med hosting og vedligeholdelse."</p>
-          </div>
-          
-          <div class="col-4 col-sm-6">
-           <div id="hosting" style="background-image:url('{{ base_path ~ directory }}/images/hostinglife.jpg');background-size:cover;"></div>
-           
-          </div>
-          
+
+      <div class="con-img-right last-child" id="top-container"
+           style="display:flex;flex-direction:row-reverse;align-items:center;">
+        <div class="col-8 col-sm-6">
+          <dd>{{ drupal_block('hostingtekst') }}</dd>
+          <p class="quoty">"Hos Bellcom hjælper vi dig med hosting og
+            vedligeholdelse."</p>
+        </div>
+
+        <div class="col-4 col-sm-6">
+          <div id="hosting"><img src="{{ base_path ~ directory }}/images/hosting.svg"></div>
+        </div>
+
       </div>
-   
-     {{ drupal_block('hostingprodukter') }}
-        
-          <!-- Customer Logos -->
+
+      {{ drupal_block('hostingprodukter') }}
+
+      <!-- Customer Logos -->
       <div class="title-customer">
-          <h3>Vi har kunder i hele landet.</h3>
-          <p>Er du vores næste kunde? Vi gør en stor dyd ud af at pleje vores kunder bedst muligt.</p>
+        <h3>Vi har kunder i hele landet.</h3>
+        <p>Er du vores næste kunde? Vi gør en stor dyd ud af at pleje vores
+          kunder bedst muligt.</p>
       </div>
       <div class="customer-logos no-top-margin">
-           {{ page.customer }}
+        {{ page.customer }}
       </div>
-        
-         <div class="con-img-right" id="gmap-container">
-          <div class="col-8 col-sm-6">
+
+      <div class="con-img-right" id="gmap-container">
+        <div class="col-8 col-sm-6">
           <dd>{{ drupal_block('gmap') }}</dd>
-          </div>
-          
-          <div class="col-4 col-sm-6" id="googlemaps">
-           <div id="map"></div> 
-          </div>
-          
+        </div>
+
+        <div class="col-4 col-sm-6" id="googlemaps">
+          <div id="map"></div>
+        </div>
+
       </div>
-   
-      
-     
+
+
     </div>
   </div>
 </div>
@@ -174,71 +175,77 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-sm-3">
-         {% if site_name %}
-        <a class="navbar-brand" href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
-      {% endif %}
-       <a class="mail-link" href="mailto:support@bellcom.dk">support@bellcom.dk</a>
-       <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br> <a class="telephone-link" href="tel:70260085">Tlf.: 70 26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
+        {% if site_name %}
+          <a class="navbar-brand" href="{{ front_page }}"
+             title="{{ 'Home'|t }}">{{ site_name }}</a>
+        {% endif %}
+        <a class="mail-link"
+           href="mailto:support@bellcom.dk">support@bellcom.dk</a>
+        <p class="footer-location-text">Bredgade 20 <br> 6000 Kolding <br><br>
+          <a class="telephone-link"
+             href="tel:70260085">Tlf.: 70
+            26 00 85</a> <br><br> Man-Fre: 09:00 - 17:00</bt></p>
         {# Social buttons block #}
         {% block social_buttons %}
-        {% if social_links %}
-        <ul class="list-inline">
-          {% for network, url in social_links %}
-          <li>
-            <a target="_blank" href="{{ url }}">
+          {% if social_links %}
+            <ul class="list-inline">
+              {% for network, url in social_links %}
+                <li>
+                  <a target="_blank" href="{{ url }}">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-{{ network }} fa-stack-1x fa-inverse"></i>
               </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         {% endblock %}
-           </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Menu</h6>
-          <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile">
-          <h6>Andet</h6>
-          <dd>{{ drupal_block('andet') }}</dd>
-          </div>
-          <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
-          {{ drupal_block('views_block__footer_blog_block_1') }}
-          </div>
- 
-    
+      </div>
+      <div class="col-6 col-sm-3 na-mobile">
+        <h6>Menu</h6>
+        <dd>{{ drupal_block('bootstrap_clean_blog_footer') }}</dd>
+      </div>
+      <div class="col-6 col-sm-3 na-mobile">
+        <h6>Andet</h6>
+        <dd>{{ drupal_block('andet') }}</dd>
+      </div>
+      <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
+        {{ drupal_block('views_block__footer_blog_block_1') }}
+      </div>
+
+
     </div>
   </div>
 </footer>
 
 <script>
-var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-for(var i = 0; i < hashParams.length; i++){
-    var p = hashParams[i].split('=');
-    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
-}
+    var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+    for (var i = 0; i < hashParams.length; i++) {
+        var p = hashParams[i].split('=');
+        document.getElementById(p[0]).value = decodeURIComponent(p[1]);
+        ;
+    }
 
 </script>
 
 <script>
 
-function initMap() {
+    function initMap() {
         var uluru = {lat: 55.4872883, lng: 9.471305900000061};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: uluru,
+            zoom: 17,
+            center: uluru,
             disableDefaultUI: true
         });
         var marker = new google.maps.Marker({
-          position: uluru,
+            position: uluru,
             icon: 'http://svgshare.com/i/zF.svg',
-          map: map
+            map: map
         });
-      }
+    }
 </script>
- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
-    </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCohs4SZmUwnlLvX4MdQ0peSIV40W8Jl-k&callback=initMap">
+</script>
