@@ -16,5 +16,7 @@ vendor/
 settings.php
 sites/bellcom_aug_2017.dd
 sites/new-bellcom-aug.dd
+sites/*.dd
+email
 .idea
 .DS_Store
