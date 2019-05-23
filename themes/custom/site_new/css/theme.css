@@ -4327,6 +4327,11 @@ nav li {
     height: 100%;
   }
 
+  .con-img-right dd>section {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
   .con-img-right .field--name-body {
     height: 100%;
     display: -webkit-box;
