@@ -1731,7 +1731,7 @@ Pricing table
 }
 
 .employees-row>div {
-  flex-basis: 270px;
+  width: 270px;
 }
 
 .employee {
