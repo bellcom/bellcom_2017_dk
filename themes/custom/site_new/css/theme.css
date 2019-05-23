@@ -1710,7 +1710,7 @@ Pricing table
   margin-top: 0px;
 }
 
-.employees-row {
+.view-content.employees-row {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -1730,7 +1730,7 @@ Pricing table
   margin-bottom: 5px !important;
 }
 
-.employees-row>div {
+.view-content.employees-row>div {
   width: 270px;
 }
 
