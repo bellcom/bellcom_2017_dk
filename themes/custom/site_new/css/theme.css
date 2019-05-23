@@ -199,14 +199,6 @@
   border-bottom: none !important;
 }
 
-.employees-row {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -ms-flex-wrap: wrap !important;
-  flex-wrap: wrap !important;
-}
-
 /* Availability */
 
 .availability .block-title {
@@ -1730,14 +1722,15 @@ Pricing table
   flex-direction: row;
   padding: 10px;
   padding-bottom: 0px;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  justify-content: left;
-  padding-left: 30px;
 }
 
 .employees-row div {
   margin-bottom: 5px !important;
+}
+
+.employees-row>div {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 .employee {
