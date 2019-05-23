@@ -1731,9 +1731,7 @@ Pricing table
 }
 
 .employees-row>div {
-  -webkit-box-flex: 1;
-  -ms-flex: auto;
-  flex: auto;
+  flex-basis: 270px;
 }
 
 .employee {
