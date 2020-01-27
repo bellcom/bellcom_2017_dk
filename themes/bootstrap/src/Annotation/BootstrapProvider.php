@@ -1,8 +1,4 @@
 <?php
-/**
- * @file
- * Contains \Drupal\bootstrap\Annotation\BootstrapProvider.
- */
 
 namespace Drupal\bootstrap\Annotation;
 
@@ -15,8 +11,8 @@ use Drupal\Component\Annotation\Plugin;
  *
  * @see \Drupal\bootstrap\Plugin\ProviderInterface
  * @see \Drupal\bootstrap\Plugin\ProviderManager
- * @see \Drupal\bootstrap\Theme::getProviders()
- * @see \Drupal\bootstrap\Theme::getProvider()
+ * @see \Drupal\bootstrap\Theme::getCdnProviders()
+ * @see \Drupal\bootstrap\Theme::getCdnProvider()
  * @see plugin_api
  *
  * @Annotation
@@ -29,6 +25,8 @@ class BootstrapProvider extends Plugin {
    * An API URL used to retrieve data for the provider.
    *
    * @var string
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $api = '';
 
@@ -36,6 +34,8 @@ class BootstrapProvider extends Plugin {
    * An array of CSS assets.
    *
    * @var array
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $css = [];
 
@@ -50,6 +50,8 @@ class BootstrapProvider extends Plugin {
    * A flag determining whether or not the API request has failed.
    *
    * @var bool
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $error = FALSE;
 
@@ -57,6 +59,8 @@ class BootstrapProvider extends Plugin {
    * A flag determining whether or not data has been manually imported.
    *
    * @var bool
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $imported = FALSE;
 
@@ -64,6 +68,8 @@ class BootstrapProvider extends Plugin {
    * An array of JavaScript assets.
    *
    * @var array
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $js = [];
 
@@ -78,6 +84,8 @@ class BootstrapProvider extends Plugin {
    * An associative array of minified CSS and JavaScript assets.
    *
    * @var array
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $min = ['css' => [], 'js' => []];
 
@@ -85,6 +93,8 @@ class BootstrapProvider extends Plugin {
    * An array of themes supported by the provider.
    *
    * @var array
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $themes = [];
 
@@ -92,6 +102,8 @@ class BootstrapProvider extends Plugin {
    * An array of versions supported by the provider.
    *
    * @var array
+   *
+   * @deprecated in 8.x-3.18, will be removed in a future release.
    */
   protected $versions = [];
 

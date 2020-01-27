@@ -1,11 +1,8 @@
 <?php
-/**
- * @file
- * Contains \Drupal\bootstrap\Plugin\PluginBase.
- */
 
 namespace Drupal\bootstrap\Plugin;
 
+use Drupal\Core\Plugin\PluginBase as CorePluginBase;
 use Drupal\bootstrap\Bootstrap;
 
 /**
@@ -13,7 +10,7 @@ use Drupal\bootstrap\Bootstrap;
  *
  * @ingroup utility
  */
-class PluginBase extends \Drupal\Core\Plugin\PluginBase {
+class PluginBase extends CorePluginBase {
 
   /**
    * The currently set theme object.
@@ -26,10 +23,7 @@ class PluginBase extends \Drupal\Core\Plugin\PluginBase {
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition) {
-    if (!isset($configuration['theme'])) {
-      $configuration['theme'] = Bootstrap::getTheme();
-    }
-    $this->theme = $configuration['theme'];
+    $this->theme = Bootstrap::getTheme(isset($configuration['theme']) ? $configuration['theme'] : NULL);
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 

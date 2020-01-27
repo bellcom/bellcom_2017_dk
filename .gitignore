@@ -3,10 +3,10 @@
 
 # Ignore non-custom parts of Drupal.
 core/
-modules
-!modules/custom
-profiles/contrib
-themes/contrib
+modules/
+!modules/media_entity
+profiles/lightning
+themes/bootstrap
 sites/default/files
 
 
