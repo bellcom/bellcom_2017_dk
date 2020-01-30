@@ -8,6 +8,7 @@ dependencies:
     - media.type.instagram
   module:
     - media_entity_instagram
+_core: {  }
 id: media.instagram.embedded
 targetEntityType: media
 bundle: instagram

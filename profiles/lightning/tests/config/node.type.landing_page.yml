@@ -11,6 +11,7 @@ third_party_settings:
     parent: 'main:'
   lightning_workflow:
     workflow: editorial
+_core: {  }
 name: 'Landing page'
 type: landing_page
 description: 'A special page with its own one-off layout and content.'

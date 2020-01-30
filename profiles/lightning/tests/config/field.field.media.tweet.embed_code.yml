@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.media.embed_code
     - media.type.tweet
+_core: {  }
 id: media.tweet.embed_code
 field_name: embed_code
 entity_type: media

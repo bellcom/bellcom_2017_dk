@@ -6,6 +6,7 @@ dependencies:
   module:
     - lightning_media
     - views
+_core: {  }
 name: image_browser
 label: 'Image Browser'
 display: modal

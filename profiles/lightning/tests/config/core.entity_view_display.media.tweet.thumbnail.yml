@@ -9,6 +9,7 @@ dependencies:
     - media.type.tweet
   module:
     - image
+_core: {  }
 id: media.tweet.thumbnail
 targetEntityType: media
 bundle: tweet

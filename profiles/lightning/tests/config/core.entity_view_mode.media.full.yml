@@ -3,6 +3,7 @@ status: false
 dependencies:
   module:
     - media
+_core: {  }
 id: media.full
 label: 'Full content'
 targetEntityType: media

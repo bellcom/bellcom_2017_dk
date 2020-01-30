@@ -16,14 +16,102 @@ the "Configuration updates" section of this file.
 
 ## Updating Lightning
 
+### Summary
+For a typical site that has a properly configured directory for exporting config
+that is managed by your VCS, you would generally follow these steps:
+
+#### In your development or local environment.
+1. Read the [release notes](https://github.com/acquia/lightning/releases)
+   for the release to which you are updating, and any other releases between
+   your current version.
+
+1. Update your codebase, replacing `[LIGHTNING_VERSION]` with the most recent
+   version of Lightning. For example, `3.1.1`.
+
+  ```
+  composer self-update
+  composer require acquia/lightning:~[LIGHTNING_VERSION] --no-update
+  composer update acquia/lightning --with-all-dependencies
+  ```
+1. Run any database updates.
+
+  ```
+  drush cache:rebuild
+  drush updatedb
+  ```
+1. Run any Lightning configuration updates.
+
+  ```
+  drush cache:rebuild
+  drush update:lightning
+  ```
+1. Export the new configuration.
+
+
+  ```
+  drush config:export
+  ```
+1. Commit the code and configuration changes to your VCS and push them to your
+   destination environment.
+
+#### On your destination environment.
+
+1. Run any database updates.
+
+  ```
+  drush cache:rebuild
+  drush updatedb
+  ```
+
+1. Import any configuration changes.
+
+  ```
+  drush cache:rebuild
+  drush config:import
+  ```
+
+### 3.x branch
+Before updating to the 3.x branch of Lightning, you should first update to
+Lightning 2.2.8 including all database updates and migrations. For example, if
+you are updating from 2.2.3:
+
+1. Make sure you have the latest version of Composer:
+
+  ```
+  composer self-update
+  ```
+2. Update your codebase to 2.2.8:
+
+  ```
+  composer require acquia/lightning:2.2.8 --no-update
+  composer update acquia/lightning --with-all-dependencies
+  ```
+3. Rebuild Drupal's cache and run database updates:
+
+  ```
+  drush cache:rebuild
+  drush updatedb
+  ```
+4. Cleanup cruft from the Media migration:
+
+  ```
+  drush pm-uninstall entity media_entity
+  ```
+5. Follow the "Configuration updates" steps below, starting with
+   "2.2.3 to 2.2.4".
+
+#### Configuration Management
+If you are using configuration management to move your configuration between
+development, staging, and production environments, you should export
+configuration after #5 and deploy.
+
 ### Composer
 If you've installed Lightning using our [Composer-based project template](https://github.com/acquia/lightning-project), all you need to do is:
 
 * ```cd /path/to/YOUR_PROJECT```
 * ```composer update```
-* Run ```drush updatedb && drush cache-rebuild```, or visit ```update.php```,
-  to perform automatic database updates. You can also use Drupal Console's
-  ```update:execute``` command.
+* Run ```drush updatedb && drush cache:rebuild```, or visit ```update.php```,
+  to perform automatic database updates.
 * Perform any necessary configuration updates (see below).
 
 ### Tarball
@@ -42,55 +130,286 @@ To update Lightning safely:
    Lightning.
 4. Visit ```update.php``` or run ```drush updatedb``` to perform any necessary
    database updates.
-5. Perform any necessary configuration updates (see below).
+5. Perform any necessary configuration updates and/or migrations (see below).
 
-## Configuration updates
+## Update instructions
 
-These instructions describe how to update your site's configuration to bring
-it in line with a newer version of Lightning. Lightning does not make these
-changes automatically, because they may change the way your site works.
+These instructions describe how to update your site to bring it in line with a
+newer version of Lightning. Lightning does not make these changes automatically
+because they may change the way your site works.
 
-However, as of version 2.1.8, Lightning provides a Drupal Console command which
-*can* perform these updates automatically, confirming each change interactively
-as it goes. If you intend to perform all the configuration updates documented
-here, this can save quite a bit of time!
+However, as of version 3.0.2, Lightning provides a Drush 9 command which *can*
+perform updates automatically, confirming each change interactively as it goes.
+If you intend to perform all the updates documented here, this can save quite
+a bit of time!
+
+That said, though, some of these updates involve complicated data migrations.
+Due to their complexity, Lightning *never* automates them -- you will need to
+take some manual action to complete these updates, which are denoted as such
+below.
 
 ### Automatic configuration updates
 
-Ensure Drupal Console is installed, then switch into the web root of your
+Ensure Drush 9 is installed, then switch into the web root of your
 Lightning installation and run:
 
 ```
-$ drupal update:lightning CURRENT_VERSION
+$ drush update:lightning
 ```
 
-...where `CURRENT_VERSION` is the version of Lightning you're currently using,
-in semantic version format (e.g., "8.x-2.24" should be "2.2.4", and
-"8.x-2.21-beta3" is "2.2.1-beta3").
 
 To run all available configuration updates without any prompting, use:
 
 ```
-$ drupal update:lightning CURRENT_VERSION --no-interaction
+$ drush update:lightning --no-interaction
 ```
 
 If you'd rather do the updates manually, follow the instructions below,
 starting from the version of Lightning you currently use. For example, if you
-are currently running Beta 1 and are trying to update to Beta 3, you will need
-to follow the instructions for updating from Beta 1 to Beta 2, then from Beta 2
-to Beta 3, in that order.
+are currently running 2.2.0 and are trying to update to 2.2.6, you will need to
+follow the instructions for updating from 2.2.0 to 2.2.1, then from 2.2.1 to
+2.2.2, in that order.
 
-### 2.2.9 to 2.2.10
+## 3.3.2 to 3.3.3
 There are no manual update steps for this version.
 
-### 2.2.8 to 2.2.9
+## 3.3.1 to 3.3.2
 There are no manual update steps for this version.
+
+## 3.3.3 to 3.3.1
+There are no manual update steps for this version.
+
+### 3.2.7 to 3.3.0
+There are no manual update steps for this version.
+
+### 3.2.6 to 3.2.7
+There are no manual update steps for this version.
+
+### 3.2.5 to 3.2.6
+* If you would like to enable support for user account pictures (avatars):
+  1. Create a new image field on user accounts. In Lightning Core, this field
+     is called "Picture" by default and its machine name is user_picture.
+  2. Set the file default-avatar.png, contained in the `images` directory
+     of Lightning Core, to be the default image for the field.
+  2. Customize the display of the "Compact" view mode for user accounts, and
+     ensure that the new image field is displayed using the Thumbnail image
+     style.
+* If you would like to display the media browser in a modal window, rather than
+  in an iFrame, follow these instructions:
+  1. Create a clone of the media browser which will only be used when embedding
+     media using the WYSIWYG editor. There is no easy way to duplicate the media
+     browser from the administrative backend, but you can run a bit of PHP code
+     at the command line with Drush (or, if you have Devel installed, at the
+     `/devel/php` path) to do it:
+```
+drush php:eval "entity_load('entity_browser', 'media_browser')->createDuplicate()->setName('ckeditor_media_browser')
+>setLabel('Media browser (CKEditor)')->save();"
+```
+  2. Configure the "Media browser" embed button to use the duplicate you just
+     created.
+  3. Grant permissions to use the duplicate entity browser to the "Media
+     creator" and "Media manager" user roles.
+  4. If you have Lightning Roles installed, you'll also need to grant access to
+     the duplicate by executing this PHP code (again, this can be done at the
+     command line with Drush, as in this example, or at `/devel/php` if you have
+     Devel installed):
+```
+drush php:eval "Drupal::service('lightning.content_roles')->grantPermissions('creator', 'use ckeditor_media_browser entity browser pages');"
+```
+  5. Edit the pre-existing media browser -- _not_ the duplicate -- to use the
+     Modal display plugin. Leave the "Width" and "Height" options empty to make
+     the modal dialog responsive, set the link text to "Add media", and disable
+     auto-open. Save the changes to the media browser.
+
+### 3.2.4 to 3.2.5
+There are no manual update steps for this version.
+
+### 3.2.3 to 3.2.4
+* Configure the "Show in media library" field of the "Audio file" media type to
+  be non-translatable.
+* Configure the "Show in media library" field of the "Video" media type to be
+  non-translatable.
+* Configure the "Show in media library" field of the "Video file" media type to
+  be non-translatable.
+* If you have the "Moderation history" view installed:
+  1. Replace the author field, which displays the original creator of the node,
+     with a new field that displays the author of the revision. This will
+     require you to add a relationship to the revision author.
+  2. Replace the creation time field, which displays the time that the node was
+     originally created, with a new field that displays the time that the
+     revision was created.
+  3. Rewrite the content of the "Moderation state" field to this Twig template
+     code:
+```
+Set to <strong>{{ moderation_state }}</strong> on {{ revision_timestamp }} by {{ revision_uid }}
+```
+
+### 3.2.2 to 3.2.3
+There are no manual update steps for this version.
+
+### 3.2.1 to 3.2.2
+There are no manual update steps for this version.
+
+### 3.2.0 to 3.2.1
+* Install the Media Library module (in the "Core (Experimental)" group). Then,
+  for each media type, create a new display, called "Media library", containing
+  only the thumbnail image, displayed using the thumbnail image style.
+* Install the new "Media Slideshow" module (in the "Lightning" group).
+* Install the Moderation Dashboard module. By default, this will cause users to
+  be redirected to their moderation dashboard upon logging in. To disable this
+  behavior, run the following Drush command:
+```
+drush config:set moderation_dashboard.settings redirect_on_login 0
+```
+
+### 3.1.7 to 3.2.0
+* If you have any sub-profiles (regardless of whether or not they extend
+  Lightning), you must change their info files to work with Drupal 8.6.0:
+  * Change `base profile` to a string, containing the name of the base
+    profile. For example: `base profile: lightning`.
+  * Change the `dependencies` key to `install`.
+  * If you have any excluded dependencies or themes, merge them into a
+    single array, with the key `exclude`.
+  For example, an 8.6.0-compatible sub-profile info file will look something
+  like this:
+```
+name: My Profile
+core: 8.x
+type: profile
+base profile: lightning
+install:
+  - paragraphs
+  - slick_entityreference
+exclude:
+  - lightning_search
+  - pathauto
+  - bartik
+```
+
+### 3.1.6 to 3.1.7
+* There are no manual update steps for this version.
+
+### 3.1.5 to 3.1.6
+* If you would like to create media items for audio files, enable the new
+  Media Audio module (lightning_media_audio).
+* Rename every instance of the "Save to media library" field (present on all
+  media types by default) to "Show in media library".
+* If you would like to create media items for video files, create a new
+  media type called "Video file", using the "Video file" source. Then, create
+  two new view displays for this media type: one called "Thumbnail", which
+  only displays the media thumbnail using the "Medium" image style, and one
+  called "Embedded", which displays the "Video file" field using the "Video"
+  formatter. Additionally, create a form display for this media type, using
+  the "Media browser" form mode, which displays, in order:
+  1. The "Name" field using the "Text field" widget
+  2. The "Video file" field using the "File" widget
+  3. The "Show in media library" field using the "Single on/off checkbox" widget
+  4. The "Published" field using the "Single on/off checkbox" widget
+* If you would like to be able to change the moderation states of content
+  without having to visit the edit form, install the Moderation Sidebar module.
+* If you'd like to streamline the Editorial workflow, edit it and make the
+  following modifications:
+  1. Rename the "Review" transition to "Send to review".
+  2. Rename the "Restore" transition to "Restore from archive".
+  3. Remove the "Restore to draft" transition, and edit the "Create new draft"
+     transition to allow content to be transitioned from the Archived state to
+     the Draft state.
+
+### 3.1.4 to 3.1.5
+There are no manual update steps for this version.
+
+Note that this release includes an update to Drupal core which security updates
+some of its dependencies. As such, you might need to include `drupal/core` in
+the list of arguments you pass to `composer update` if any of its dependencies
+are locked at older versions in your project. For example:
+
+```
+$ composer update acquia/lightning drupal/core --with-all-dependencies
+```
+
+### 3.1.3 to 3.1.4
+* **NOTE: This is a _fully manual update_ that involves a data migration!**
+  Lightning Scheduler has been completely rewritten, and now stores scheduled
+  moderation state transitions in a pair of new base fields. You will need to
+  migrate any existing scheduled transitions from the old base fields to the
+  new ones. After completing database updates, Lightning Scheduler will link
+  you to a UI where you can run the migration. Alternatively, you can do it
+  at the command line (Drush 9 only) by running
+  `drush lightning:scheduler:migrate`.
+
+  If you have scheduled transitions attached to a specific entity type and
+  you'd like to discard those transitions without migrating them (test data,
+  for example), you can "purge" it in the UI, or at the command line by running
+  `drush lightning:scheduler:purge ENTITY_TYPE_ID`. Purging must be done one
+  entity type at a time, e.g. `drush lightning:scheduler:purge paragraph`.
+
+  Once all entity types have been migrated or purged, the old base fields will
+  need to be uninstalled. You can perform this clean-up work automatically by
+  running `drush entity-updates`.
+
+**Note:** The Lightning Scheduler migration in Lightning 3.1.4 affects actual
+  content entities. As such, it will need to be run on your production
+  database.
+
+### 3.1.2 to 3.1.3
+There are no manual update steps for this version.
+
+### 3.1.1 to 3.1.2
+There are no manual update steps for this version.
+
+### 3.1.0 to 3.1.1
+* If you have Lightning Roles and Lightning Workflow installed, grant the
+  "View any unpublished content" and "View latest version" roles for each
+  provided "reviewer" role.  
+
+### 3.0.3 to 3.1.0
+* Edit the **Media** view, and if it has an exposed filter called "Media Type",
+  modify the filter label to "Type" and change its URL identifier to "type".
+
+### 3.0.2 to 3.0.3
+There are no manual update steps for this version.
+
+### 3.0.1 to 3.0.2
+There are no manual update steps for this version.
+
+### 3.0.0 to 3.0.1
+There are no manual update steps for this version.
+
+### 2.2.8 to 3.0.0
+There are no manual update steps for this version.
+
+**Note:** The following modules are no longer provided or used by Lightning. If
+you use these modules you will need to add them to your project's composer.json
+file or include them in your codebase using another method:
+
+* Scheduled Updates (`scheduled_updates`)
+* Features (`features`)
+* Configuration Update Manager (`config_update`)
+* Entity (`entity`)
+* Media Entity (`media_entity`)
+* Media Entity Document (`media_entity_document`)
+* Media Entity Image (`media_entity_image`)
+
+For example, if you use Features to manage your configuration, you can include
+it in your project with the following command:
+
+```
+composer require drupal/features
+```
+
+**Note:** See "3.x branch" section above for detailed instructions.
+
+**Note:** You will likely need to update Lightning's constraint to get the 3.x
+branch. The following is a good starting point, but additional commands might be
+needed depending on your specific requirements and constraints:
+
+```
+composer require acquia/lightning:~3.0.0 --no-update
+composer update acquia/lightning --with-all-dependencies
+```   
 
 ### 2.2.7 to 2.2.8
 There are no manual update steps for this version.
-
-You should switch to the 3.x branch of Lightning. The 2.x branch is no longer
-maintained.
 
 ### 2.2.6 to 2.2.7
 There are no manual update steps for this version.
@@ -105,77 +424,49 @@ There are no manual update steps for this version.
 * Visit *Structure > Media types*. For each media type, click "Manage display"
   and select the "Embedded" display. Then drag the "Name" field into the
   "Disabled" section and press "Save".
+* If you previously used a sub-profile to exclude Lightning Workflow's
+  "Schedule Publication" sub-component (its machine name is
+  `lightning_scheduled_updates`), you will need to update your sub-profile's
+  excluded dependencies to exclude `lightning_scheduler` instead, which
+  replaces `lightning_scheduled_updates` in this release.
+* Uninstall Scheduled Updates and Lightning Scheduled Updates, and enable the
+  Lightning Scheduler module.
+
+  ```
+  drush pm-uninstall scheduled_updates lightning_scheduled_updates
+  drush pm-enable lightning_scheduler
+  ```
 * To migrate to Content Moderation, install the wbm2cm module and Drush (8.x or
   9.x). **Back up your database**, then run ```drush wbm2cm-migrate``` to run
   the migration.
-* If you previously used a sub-profile to exclude Lightning Workflow's
-  "Schedule Publication" sub-component (its machine name is
-  lightning_scheduled_updates), you will need to update your sub-profile's
-  excluded dependencies to exclude lightning_scheduler instead, which
-  replaces lightning_scheduled_updates in this release.
+
+**Note:** The Workbench Moderation to Content Moderation migration in Lightning
+2.2.4 affects actual content entities. As such, it will need to be run on your
+production database. If you have previously run the migration locally and
+deployed your config, you will run into issues with your config trying to
+disable Workbench Moderation - since the migration hasn't taken place on that
+database yet.
+
+If you store and deploy your config via a VCS, it is recommended that you skip
+the last manual step during your initial update to 2.2.4. Once the other config
+changes have been deployed, test the migration locally on an export of your
+production database before ultimately running it in your production environment.
+As with any script that affects content, be sure to take a backup of your
+production database before running the script.  
 
 ### 2.2.2 to 2.2.3
 There are no manual update steps for this version.
 
 ### 2.2.1 to 2.2.2
 There are no manual update steps for this version.
- 
-This release fixes some requirements problems with the 2.2.1 media migration.
-You *can* update directly from 2.2.0 to 2.2.2. When doing so, follow the
-"Special instructions for media entity migration" steps below.
 
 ### 2.2.0 to 2.2.1
-
-##### Special instructions for Media Entity migration
-This release will migrate your existing media entities to the core Media module.
-Prior to running the database updates, you must:
-
-1. Ensure Composer properly downloaded and patched all dependencies.
-1. Rebuild Drupal's caches.
-
-This release changes the set of patches that are applied to drupal/core without
-actually updating core, which exposes [this bug in the composer-patches plugin](https://github.com/cweagans/composer-patches/issues/71).
-As a result, you will likely need to run composer update twice. Specifically:
-
-```
-composer update acquia/lightning --with-dependencies
-composer update drupal/core
-```
- 
-Alternatively, you can delete your "/docroot/core" and "/docroot/modules"
-folders and your composer.lock file before running `composer update`. If you use
-[BLT](http://blt.readthedocs.io/en/8.x/), the provided `composer nuke` command
-will do that for you.
-
-Once you have confirmed that your codebase has been update properly, you must
-rebuild your site's caches *before* running the database updates.
-
-```
-drush cache-rebuild
-```
-
-If your codebase has been updated properly, you should see the following four
-pending database updates when you run `drush updatedb`:
-
-```
-lightning_api module : 
-  8002 -   Installs the Consumers module. 
-
-lightning_media module : 
-  8018 -   Updates the media browser's argument validation. 
-
-media_entity module : 
-  8200 -   Clears the module handler's hook implementation cache. 
-  8201 -   Replace Media Entity with Media. 
-```
-
-##### Configuration updates
 * Visit *Structure > Content types*. For each moderated content type, click
   "Manage form display", then drag the "Publishing status" field into the
   "Disabled" section and press "Save".
 
 ### 2.1.8 to 2.2.0
-There are no manual update steps for this version. 
+There are no manual update steps for this version.
 
 ### 2.1.7 to 2.1.8
 * Lightning now ships with support for image cropping, using the Image Widget

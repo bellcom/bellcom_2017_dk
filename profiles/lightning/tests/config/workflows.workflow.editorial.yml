@@ -6,6 +6,7 @@ dependencies:
     - node.type.page
   module:
     - content_moderation
+_core: {  }
 id: editorial
 label: Editorial
 type: content_moderation
@@ -75,5 +76,5 @@ type_settings:
       weight: 0
   entity_types:
     node:
-      - landing_page
       - page
+      - landing_page

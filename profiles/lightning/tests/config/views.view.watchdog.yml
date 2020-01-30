@@ -4,6 +4,7 @@ dependencies:
   module:
     - dblog
     - user
+_core: {  }
 id: watchdog
 label: Watchdog
 module: views

@@ -8,6 +8,7 @@ dependencies:
   module:
     - text
     - user
+_core: {  }
 id: node.page.teaser
 targetEntityType: node
 bundle: page

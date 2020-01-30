@@ -9,6 +9,7 @@ dependencies:
   module:
     - content_moderation
     - path
+_core: {  }
 id: media.video.media_browser
 targetEntityType: media
 bundle: video

@@ -5,6 +5,7 @@ dependencies:
     - search_api.index.content
   module:
     - search_api
+_core: {  }
 id: search
 label: Search
 module: views
@@ -24,8 +25,12 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
-        options: {  }
+        type: search_api_time
+        options:
+          results_lifespan: 3600
+          results_lifespan_custom: 0
+          output_lifespan: 3600
+          output_lifespan_custom: 0
       query:
         type: views_query
       exposed_form:

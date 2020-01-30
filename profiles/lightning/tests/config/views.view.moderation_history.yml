@@ -5,6 +5,7 @@ dependencies:
     - content_moderation
     - node
     - user
+_core: {  }
 id: moderation_history
 label: 'Moderation history'
 module: views

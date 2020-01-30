@@ -4,6 +4,7 @@ dependencies:
   module:
     - file
     - user
+_core: {  }
 id: files
 label: Files
 module: file

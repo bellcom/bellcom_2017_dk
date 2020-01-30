@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.media.embed_code
     - media.type.instagram
+_core: {  }
 id: media.instagram.embed_code
 field_name: embed_code
 entity_type: media
