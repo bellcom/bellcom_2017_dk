@@ -8,8 +8,8 @@
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
 use Drupal\field\Entity\FieldConfig;
-use Drupal\media_entity\Entity\MediaBundle;
-use Drupal\video_embed_media\Plugin\MediaEntity\Type\VideoEmbedField;
+use Drupal\lightning_core\ConfigHelper as Config;
+use Drupal\media\Entity\MediaType;
 
 /**
  * Installs video_embed_media and updates display settings for videos.
@@ -27,7 +27,7 @@ function lightning_media_video_update_8001() {
     $old_component = $form_display->getComponent('embed_code');
     $form_display
       ->removeComponent('field_embed_code')
-      ->setComponent(VideoEmbedField::VIDEO_EMBED_FIELD_DEFAULT_NAME, [
+      ->setComponent('field_media_video_embed_field', [
         'type' => 'video_embed_field_textfield',
         'weight' => $old_component['weight'],
         'settings' => array(),
@@ -44,7 +44,7 @@ function lightning_media_video_update_8001() {
       $old_component = $form_display->getComponent('embed_code');
       $view_display
         ->removeComponent('field_embed_code')
-        ->setComponent(VideoEmbedField::VIDEO_EMBED_FIELD_DEFAULT_NAME, [
+        ->setComponent('field_media_video_embed_field', [
           'type' => 'video_embed_field_video',
           'weight' => $old_component['weight'],
           'label' => $old_component['label'],
@@ -61,9 +61,9 @@ function lightning_media_video_update_8001() {
   }
 
   // Reconfigure the video media bundle.
-  MediaBundle::load('video')
-    ->set('type_configuration', [
-      'source_field' => VideoEmbedField::VIDEO_EMBED_FIELD_DEFAULT_NAME,
+  MediaType::load('video')
+    ->set('source_configuration', [
+      'source_field' => 'field_media_video_embed_field',
     ])
     ->save();
 
@@ -78,5 +78,31 @@ function lightning_media_video_update_8001() {
  * Creates the media_browser form display.
  */
 function lightning_media_video_update_8002() {
-  lightning_core_create_config('core_entity_form_display', 'media.video.media_browser', 'lightning_media_video');
+  Config::forModule('lightning_media_video')
+    ->getEntity('entity_form_display', 'media.video.media_browser')
+    ->save();
+}
+
+/**
+ * Creates the thumbnail display for videos.
+ */
+function lightning_media_video_update_8003() {
+  Config::forModule('lightning_media_video')
+    ->getEntity('entity_view_display', 'media.video.thumbnail')
+    ->save();
+}
+
+/**
+ * Implements hook_update_dependencies().
+ */
+function lightning_media_video_update_dependencies() {
+  return [
+    'lightning_media_video' => [
+      // 8003 depends on the thumbnail view mode, which is created by
+      // lightning_media 8015.
+      8003 => [
+        'lightning_media' => 8015,
+      ],
+    ],
+  ];
 }

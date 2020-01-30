@@ -1,4 +1,4 @@
-<!-- @file Documents the "Plugin System" for the Drupal Bootstrap base theme. -->
+<!-- @file Documents the Plugin System for the Drupal Bootstrap base theme. -->
 <!-- @defgroup -->
 <!-- @ingroup -->
 # Plugin System
@@ -31,16 +31,16 @@ container construction since a theme could vary from page to page (in theory).
 So, instead, this base theme implements its own annotated discovery plugins
 to leverage the powerful inheritance capabilities of PHP class instances.
 
-All of these plugins can be found in the following directories and are discussed,
-in length, below in their respective sub-topics:
-- `./bootstrap/src/Plugin/Alter`
-- `./bootstrap/src/Plugin/Form`
-- `./bootstrap/src/Plugin/Preprocess`
-- `./bootstrap/src/Plugin/Prerender`
-- `./bootstrap/src/Plugin/Process`
-- `./bootstrap/src/Plugin/Provider`
-- `./bootstrap/src/Plugin/Setting`
-- `./bootstrap/src/Plugin/Update`
+All of these plugins can be found in the following directories and are
+discussed, in length, below in their respective sub-topics:
+- `./themes/bootstrap/src/Plugin/Alter`
+- `./themes/bootstrap/src/Plugin/Form`
+- `./themes/bootstrap/src/Plugin/Preprocess`
+- `./themes/bootstrap/src/Plugin/Prerender`
+- `./themes/bootstrap/src/Plugin/Process`
+- `./themes/bootstrap/src/Plugin/Provider`
+- `./themes/bootstrap/src/Plugin/Setting`
+- `./themes/bootstrap/src/Plugin/Update`
 
 While sub-themes are not required to do so, they can easily emulate this same
 type of file structure/workflow and take advantage of this base theme's unique

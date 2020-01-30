@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_manager
+label: 'Layout manager'
+weight: 2
+is_admin: false
+permissions:
+  - 'administer node display'
+  - 'administer panelizer'

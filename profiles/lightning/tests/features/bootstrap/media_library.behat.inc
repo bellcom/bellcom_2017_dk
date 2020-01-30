@@ -5,12 +5,17 @@
  * Contains \MediaLibrarySubContext.
  */
 
+use Acquia\LightningExtension\AwaitTrait;
+use Acquia\LightningExtension\Context\CkEditorContext;
+use Acquia\LightningExtension\Context\EntityBrowserContext;
 use Drupal\DrupalExtension\Context\DrupalSubContextBase;
 
 /**
  * Contains step definitions for testing the CKEditor media widget.
  */
 class MediaLibrarySubContext extends DrupalSubContextBase {
+
+  use AwaitTrait;
 
   /**
    * The Mink context.
@@ -60,11 +65,11 @@ class MediaLibrarySubContext extends DrupalSubContextBase {
    * @When I open the media browser
    */
   public function openMediaBrowser($button = 'media_browser') {
-    /** @var \CkEditorSubContext $ck_context */
-    $ck_context = $this->getContext('\CkEditorSubContext');
-    $ck_context->execute('editdrupalentity', NULL, ['id' => $button]);
+    $this
+      ->getContext(CkEditorContext::class)
+      ->execute('editdrupalentity', NULL, ['id' => $button]);
 
-    $this->minkContext->iWaitForAjaxToFinish();
+    $this->awaitAjax();
     $frame = 'entity_browser_iframe_' . $button;
     $this->awaitElement('iframe[name="' . $frame . '"]', 30);
     $this->getSession()->switchToIFrame($frame);
@@ -80,13 +85,10 @@ class MediaLibrarySubContext extends DrupalSubContextBase {
    */
   public function selectNthItem($n) {
     sleep(5);
-    $row = floor($n / 4) + 1;
-    $column = ($n % $row) + 1;
 
-    $selector = '.view-media .row-' . $row . ' .col-' . $column;
-    /** @var \LightningSubContext $lightning */
-    $lightning = $this->getContext('\LightningSubContext');
-    $lightning->clickElementBySelector($selector);
+    $this
+      ->getContext(EntityBrowserContext::class)
+      ->selectItem($n, 'media_browser');
   }
 
   /**
@@ -100,18 +102,18 @@ class MediaLibrarySubContext extends DrupalSubContextBase {
     $session->switchToWindow();
     $session->executeScript('window.frames.entity_browser_iframe_media_browser.document.forms[0].elements.op.click()');
     $this->awaitExpression('!window.frames.entity_browser_iframe_media_browser');
-    $this->minkContext->iWaitForAjaxToFinish();
+    $this->awaitAjax();
     $this->awaitElement('form.entity-embed-dialog');
     $session->executeScript('document.querySelector("form.entity-embed-dialog").elements.op[1].click()');
-    $this->minkContext->iWaitForAjaxToFinish();
+    $this->awaitAjax();
   }
 
   /**
    * Waits for the inline entity form (containing required fields) to exist.
    */
   protected function awaitEntityForm() {
-    $this->minkContext->iWaitForAjaxToFinish();
-    $this->awaitExpression('document.getElementById("ief-target").textContent.length');
+    $this->awaitAjax();
+    $this->awaitExpression('jQuery("#entity").children().length');
   }
 
   /**
@@ -144,7 +146,7 @@ class MediaLibrarySubContext extends DrupalSubContextBase {
       ->elementExists('css', 'nav.eb-tabs ul li a[data-button-id="edit-tab-selector-8b142f33-59d1-47b1-9e3a-4ae85d8376fa"]')
       ->click();
 
-    $this->minkContext->fillField('embed_code', $code);
+    $this->minkContext->fillField('input', $code);
     // The change event, which triggers AJAX, is fired automatically after 600
     // milliseconds.
     sleep(1);

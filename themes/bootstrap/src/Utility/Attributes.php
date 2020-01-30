@@ -1,10 +1,8 @@
 <?php
-/**
- * @file
- * Contains \Drupal\bootstrap\Utility\Attributes.
- */
 
 namespace Drupal\bootstrap\Utility;
+
+use Drupal\Core\Template\AttributeValueBase;
 
 /**
  * Class to help modify attributes.
@@ -29,6 +27,11 @@ class Attributes extends ArrayObject {
    * @see \Drupal\bootstrap\Utility\Attributes::getClasses()
    */
   public function addClass($class) {
+    // Handle core Attribute based object values.
+    // @see https://www.drupal.org/project/bootstrap/issues/3020266
+    if ($class instanceof AttributeValueBase) {
+      $class = $class->value();
+    }
     $classes = &$this->getClasses();
     $classes = array_unique(array_merge($classes, (array) $class));
   }
@@ -152,7 +155,14 @@ class Attributes extends ArrayObject {
    * @see \Drupal\bootstrap\Utility\ArrayObject::offsetSet()
    */
   public function setAttribute($name, $value) {
-    $this->offsetSet($name, $value);
+    // Handle class attribute differently.
+    if ($name === 'class') {
+      $this->removeAttribute('class');
+      $this->addClass($value);
+    }
+    else {
+      $this->offsetSet($name, $value);
+    }
   }
 
   /**
@@ -164,6 +174,14 @@ class Attributes extends ArrayObject {
    * @see \Drupal\bootstrap\Utility\ArrayObject::merge()
    */
   public function setAttributes(array $values) {
+    // Handle class attribute differently.
+    $classes = isset($values['class']) ? $values['class'] : [];
+    unset($values['class']);
+    if ($classes) {
+      $this->addClass($classes);
+    }
+
+    // Merge the reset of the attributes.
     $this->merge($values);
   }
 
