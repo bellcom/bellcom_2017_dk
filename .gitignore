@@ -3,6 +3,7 @@
 
 # Ignore non-custom parts of Drupal.
 core/
+libraries/
 modules/
 !modules/custom
 profiles/lightning
