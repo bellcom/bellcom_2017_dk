@@ -115,50 +115,50 @@
  </div>
  </div>
   <div class="container">
-  
+
     <div class="row">
-   
-       
-        
-      
+
+
+
+
         <div class="wrapping-cards">
         <div class="cards-wrapped">
-        
+
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
            <div class="cards">
             <div class="cards-icon">
                   <img src="{{ base_path ~ directory }}/images/icon_01_coding.svg">
 
             </div>
-           <dd>{{ drupal_block('developmentcard') }}</dd> 
+           <dd>{{ drupal_block('developmentcard') }}</dd>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            
+
             <div class="cards">
               <div class="cards-icon">
               <img src="{{ base_path ~ directory }}/images/icon_02_hosting.svg">
-   
+
             </div>
-         <dd>{{ drupal_block('hostingcard') }}</dd> 
+         <dd>{{ drupal_block('hostingcard') }}</dd>
             </div>
-            
+
         </div>
-        
+
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            
+
            <div class="cards">
             <div class="cards-icon">
                 <img src="{{ base_path ~ directory }}/images/icon_03_support.svg">
             </div>
-             <dd>{{ drupal_block('supportcard') }}</dd> 
+             <dd>{{ drupal_block('supportcard') }}</dd>
             </div>
-            
+
         </div>
         </div>
         </div>
-     
+
     </div>
   </div>
 </header>
@@ -178,44 +178,49 @@
           {{ page.content }}
         {% endblock %}
       </div>
-      
+
       <!-- Testimonials -->
-      
-      <div class="con-img-right">
-          <div class="col-8 col-sm-6">
-          <dd>{{ drupal_block('frontpage_testimonial') }}</dd>
-          </div>
-          
-          <div class="col-4 col-sm-6" style="background-image: url('{{ base_path ~ directory }}/images/linda_big.jpg');height:100%;background-size:cover;background-repeat:no-repeat;">
-            
-             
-          </div>
-          
-      </div>
-      
+
+
       <!-- Customer Logos -->
-      
+
       <div class="customer-logos">
            {{ page.customer }}
       </div>
-      
-       
+
+
       <div class="con-img-right" style="flex-direction:row-reverse;display:flex;">
           <div class="col-8 col-sm-6">
           <dd>{{ drupal_block('frontpage_course') }}</dd>
           </div>
-          
+
           <div class="col-4 col-sm-6" style="background-image: url('{{ base_path ~ directory }}/images/socialmedia.jpg');height:100%;background-size:cover;background-repeat:no-repeat;">
-       
+
           </div>
-          
+
       </div>
-      
-      
+
+
       <div class="cta-block">
             <dd>{{ drupal_block('cta') }}</dd>
       </div>
-      
+
+      <div class="ski-logo-wrapper">
+        <div class="ski-logo-inner-wrapper">
+
+          <div class="logo-img-wrapper">
+            <img src="../images/leverandoer_logo_RGB.png">
+          </div>
+          <div class="ski-tekst">
+            <p>Vi er leverandør på en SKI-rammeaftale og kan levere digitale løsninger på
+              konkurrencedygtige vilkår til det offentlige. Som leverandør lever vi op til en række kriterier
+              inden for kvalitet, miljø og samfundsansvar</p>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
@@ -260,8 +265,8 @@
              <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
           {{ drupal_block('views_block__footer_blog_block_1') }}
           </div>
- 
-    
+
+
     </div>
   </div>
 </footer>
