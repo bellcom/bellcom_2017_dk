@@ -4637,6 +4637,7 @@ nav li {
 
 .ski-tekst {
   font-size: 22px;
+  text-align: left !important;
 }
 
 @media only screen and (max-width: 768px) {
