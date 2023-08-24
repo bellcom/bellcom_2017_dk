@@ -88,7 +88,7 @@
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
 <header class="page-header">
-  
+
       {% if node %}
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <div class="post-heading">
@@ -114,7 +114,7 @@
       {% endif %}
 
 
- 
+
 </header>
 
 <!-- Post Content -->
@@ -130,13 +130,28 @@
           <a id="main-content"></a>
           {{ page.content }}
         {% endblock %}
-        
-        
+
+
       </div>
-      
-        
+
+
       <div class="cta-block">
             <dd>{{ drupal_block('cta') }}</dd>
+      </div>
+      <div class="ski-logo-wrapper">
+        <div class="ski-logo-inner-wrapper">
+
+          <div class="logo-img-wrapper">
+            <img src="../images/leverandoer_logo_RGB.png">
+          </div>
+          <div class="ski-tekst">
+            <p>Vi er leverandør på en SKI-rammeaftale og kan levere digitale løsninger på
+              konkurrencedygtige vilkår til det offentlige. Som leverandør lever vi op til en række kriterier
+              inden for kvalitet, miljø og samfundsansvar</p>
+          </div>
+
+        </div>
+
       </div>
     </div>
   </div>
@@ -182,8 +197,8 @@ Fredag: kl. 08.00 - 15.30</bt></p>
           <div class="col-6 col-sm-3 na-mobile"><h6>Seneste blogindlæg</h6>
           {{ drupal_block('views_block__footer_blog_block_1') }}
           </div>
- 
-    
+
+
     </div>
   </div>
 </footer>
