@@ -4645,4 +4645,7 @@ nav li {
     flex-direction: column;
     justify-content: center;
   }
+  #breaker {
+    height: 1000px;
+  }
 }
